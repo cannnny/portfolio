@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header>
         <div className="header-logo">
-          <h1>Canipture!</h1>
+          <img src="./logo2.png" alt="" />
         </div>
         <div className="header-menu">
           <ul>
