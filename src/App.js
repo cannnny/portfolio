@@ -34,12 +34,7 @@ function App() {
         </div>
         <div className="scroll">
           <p>Scroll</p>
-          <FaAngleDown
-            className="scroll-icon"
-            size={"30px"}
-            color={"#fff"}
-            opacity={"0.8"}
-          />
+          <FaAngleDown className="scroll-icon" size={"30px"} color={"#fff"} />
         </div>
       </header>
       <div className="main">

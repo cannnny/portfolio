@@ -16,10 +16,6 @@ header {
   h1 {
     display: none;
   }
-  p {
-    color: #ffffff;
-    text-decoration: none;
-  }
 }
 
 .header-logo {
@@ -44,6 +40,10 @@ header {
     list-style: none;
     padding: 0;
   }
+  p {
+    color: #ffffff;
+    text-decoration: none;
+  }
 }
 
 .scroll {
@@ -53,6 +53,7 @@ header {
   opacity: 0.8;
   margin-top: auto;
   p {
+    color: #ffffff;
     font-size: 23px;
     font-family: Arial Rounded MT bold;
   }
