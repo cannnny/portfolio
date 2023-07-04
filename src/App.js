@@ -1,5 +1,6 @@
 import "./reset.css";
 import "./App.scss";
+import { TbMenu2 } from "react-icons/tb";
 
 function App() {
   return (
@@ -9,15 +10,16 @@ function App() {
           <img src="./logo3.png" alt="" />
         </div>
         <div className="header-menu">
+          <TbMenu2 />
           <ul>
             <li>
-              <a href="#">about</a>
+              <p>about</p>
             </li>
             <li>
-              <a href="#">works</a>
+              <p>works</p>
             </li>
             <li>
-              <a href="#">contact</a>
+              <p>contact</p>
             </li>
           </ul>
         </div>
