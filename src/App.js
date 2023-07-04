@@ -35,7 +35,7 @@ function App() {
         <div className="about container">
           <h2>About</h2>
           <div className="about-inner">
-            <img className="admin-icon" src="" alt="" />
+            <img className="about-photo" src="" alt="" />
             <div className="introduce">
               <div className="about-text">ほげ</div>
               <div className="skills">
