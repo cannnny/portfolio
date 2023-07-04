@@ -1,16 +1,15 @@
 import "./reset.css";
 import "./App.scss";
-import { TbMenu2 } from "react-icons/tb";
+import { IoIosArrowDown } from "react-icons/io";
 
 function App() {
   return (
     <div className="App">
       <header>
         <div className="header-logo">
-          <img src="./logo3.png" alt="" />
+          <img src="./logo2.png" alt="" />
         </div>
         <div className="header-menu">
-          <TbMenu2 />
           <ul>
             <li>
               <p>about</p>
@@ -22,6 +21,14 @@ function App() {
               <p>contact</p>
             </li>
           </ul>
+        </div>
+        <div className="scroll">
+          <p>Scroll</p>
+          <IoIosArrowDown
+            className="scroll-icon"
+            size={"30px"}
+            color={"#fff"}
+          />
         </div>
       </header>
       <div className="main">
