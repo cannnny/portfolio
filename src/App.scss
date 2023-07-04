@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+* {
+  font-family: Arial Rounded MT regular;
+}
 
 header {
   display: flex;
@@ -11,6 +14,9 @@ header {
   background-image: url("../public/background.jpg");
   background-position: center center;
   background-size: cover;
+  h1 {
+    display: none;
+  }
   p {
     color: #ffffff;
     text-decoration: none;
@@ -47,8 +53,10 @@ header {
   align-items: center;
   opacity: 0.8;
   margin-top: auto;
-  font-size: 23px;
-  font-family: Arial Rounded MT bold;
+  p {
+    font-size: 23px;
+    font-family: Arial Rounded MT bold;
+  }
   .scroll-icon {
     animation: scrolldown 1s ease-in-out infinite both;
   }
@@ -66,9 +74,30 @@ header {
   }
 }
 
+.main {
+  position: relative;
+}
+
 .container {
   width: 100%;
+  padding: 30px 10px;
   text-align: center;
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    padding-top: 3px;
+  }
+}
+
+.portrait {
+  width: 30%;
+  margin: 15px auto;
+  border-radius: 50%;
+}
+
+.introduce-inner {
+  margin-top: 25px;
 }
 
 .works-inner {
@@ -77,6 +106,15 @@ header {
 
   grid-template-rows: 90px 90px 90px;
   grid-template-columns: 90px 90px 120px;
+}
+
+.returntop-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 85%;
+  left: 75%;
 }
 
 footer {
