@@ -51,7 +51,7 @@ function App() {
               <div className="career">
                 <h3>堂寺ユミ（どうてらゆみ）</h3>
                 <p>2019年から某23区役所で職員として勤務。</p>
-                <p>情報部門や人事部門の業務に従事してきました。</p>
+                <p>情報・人事部門の業務に従事してきました。</p>
                 <p>プログラミングは独学です。</p>
               </div>
               <div className="introduce-inner skills">
