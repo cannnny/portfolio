@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300&family=Montserrat:wght@300&display=swap");
 * {
-  font-family: Arial Rounded MT regular;
+  color: #192f60;
+  font-family: "IBM Plex Sans JP", sans-serif;
 }
 
 header {
@@ -22,10 +24,10 @@ header {
   opacity: 0.9;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 51.5%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 350px;
+  max-width: 310px;
 }
 
 .header-menu {
@@ -59,6 +61,8 @@ header {
   }
   .scroll-icon {
     animation: scrolldown 1s ease-in-out infinite both;
+
+    fill: #ffffff;
   }
 }
 
@@ -84,9 +88,11 @@ header {
   text-align: center;
   h2 {
     font-size: 30px;
+    font-family: "Montserrat", sans-serif;
   }
   p {
     padding-top: 3px;
+    font-size: 15px;
   }
 }
 
@@ -108,17 +114,9 @@ header {
   gap: 7px;
 }
 
-.works {
-  background-color: #cccccc;
-}
-
-.works-inner {
-  display: grid;
-  justify-content: center;
-  margin-top: 25px;
-
-  grid-template-rows: 100px 100px 100px;
-  grid-template-columns: 100px 100px 100px;
+.swiper {
+  width: 100%;
+  height: 400px;
 }
 
 .returntop-button {
@@ -135,8 +133,7 @@ footer {
   justify-content: center;
   align-items: center;
   height: 40px;
-  background-color: #a4c1d7;
-
+  background-color: #192f60;
   p {
     color: #ffffff;
     font-size: 12px;

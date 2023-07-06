@@ -1,5 +1,14 @@
 import "./reset.css";
 import "./App.scss";
+
+// Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// icons
 import { IoIosArrowDropupCircle } from "react-icons/io";
 import { FaAngleDown, FaHtml5, FaSass, FaReact } from "react-icons/fa";
 import { SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
@@ -10,6 +19,36 @@ function App() {
       top: 0,
       behavior: "smooth",
     });
+  };
+
+  const swiperParams = {
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    spaceBetween: 24,
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    //   waitForTransition: false,
+    // },
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      type: "bullets",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      600: {
+        slidesPerView: 1,
+      },
+      1025: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+      },
+    },
   };
 
   return (
@@ -70,17 +109,19 @@ function App() {
         <div className="main-container works">
           <h2>Works</h2>
           <div className="works-inner">
-            <div className="item">1</div>
-            <div className="item">2</div>
-            <div className="item">3</div>
-            <div className="item">4</div>
-            <div className="item">5</div>
-            <div className="item">6</div>
+            <Swiper {...swiperParams}>
+              <SwiperSlide>Slide 1</SwiperSlide>
+              <SwiperSlide>Slide 2</SwiperSlide>
+              <SwiperSlide>Slide 3</SwiperSlide>
+            </Swiper>
+            <div className="swiper-button-prev"></div>
+            <div className="swiper-button-next"></div>
+            <div className="swiper-pagination"></div>
           </div>
         </div>
         <div className="returntop-button" onClick={returnTop}>
           <p>Page top</p>
-          <IoIosArrowDropupCircle size={"50px"} />
+          <IoIosArrowDropupCircle size={"50px"} color={"#192f60"} />
         </div>
         <div className="main-container contact">
           <h2>Contact</h2>
