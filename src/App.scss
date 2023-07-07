@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300&family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat&family=Comfortaa&family=Dancing+Script&family=Dosis&family=Kalam&family=Lobster&family=M+PLUS+Rounded+1c&family=Marck+Script&family=Pacifico&family=Rubik&family=Sacramento&family=Satisfy&family=Shadows+Into+Light&family=Yellowtail&display=swap");
+
 * {
   color: #192f60;
-  font-family: "IBM Plex Sans JP", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 header {
@@ -54,11 +55,12 @@ header {
   align-items: center;
   opacity: 0.8;
   margin-top: auto;
-  p {
-    color: #ffffff;
-    font-size: 23px;
-    font-family: Arial Rounded MT bold;
-  }
+  padding-bottom: 3px;
+  // p {
+  //   color: #ffffff;
+  //   font-size: 23px;
+  //   font-family: Arial Rounded MT bold;
+  // }
   .scroll-icon {
     animation: scrolldown 1s ease-in-out infinite both;
 
@@ -87,8 +89,8 @@ header {
   padding: 40px 15px;
   text-align: center;
   h2 {
-    font-size: 30px;
-    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    font-family: "Yellowtail", cursive;
   }
   p {
     padding-top: 3px;
@@ -111,12 +113,37 @@ header {
   justify-content: center;
   margin-top: 5px;
 
-  gap: 7px;
+  gap: 9px;
 }
 
 .swiper {
   width: 100%;
-  height: 400px;
+  height: 300px;
+}
+.swiper-slide img {
+  display: block;
+  margin: 0 auto;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  --swiper-navigation-color: #192f60;
+  &::after {
+    font-size: 30px !important;
+  }
+}
+
+.swiper-pagination {
+  position: initial !important;
+}
+.swiper-pagination-bullets {
+  top: calc(50% - var(--add-bottom) / 2);
+  padding-bottom: var(--add-bottom);
+
+  --add-bottom: 50px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #192f60 !important;
 }
 
 .returntop-button {

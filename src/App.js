@@ -25,6 +25,7 @@ function App() {
     modules: [Navigation, Pagination],
     slidesPerView: 1,
     spaceBetween: 24,
+    centeredSlides: true,
     // autoplay: {
     //   delay: 3000,
     //   disableOnInteraction: false,
@@ -72,8 +73,7 @@ function App() {
           </ul>
         </div>
         <div className="scroll">
-          <p>Scroll</p>
-          <FaAngleDown className="scroll-icon" size={"30px"} color={"#fff"} />
+          <FaAngleDown className="scroll-icon" size={"40px"} color={"#fff"} />
         </div>
       </header>
       <div className="main">
@@ -110,12 +110,21 @@ function App() {
           <h2>Works</h2>
           <div className="works-inner">
             <Swiper {...swiperParams}>
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
+              <SwiperSlide>
+                <img src="./capture-mh-weak-info.png" alt="" />
+                <p>モンハン弱点教えてくれるくん</p>
+                <div class="explanation"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="./capture-hello-pawmo.png" alt="" />
+                <p>Hello Pawmo!</p>
+                <div class="explanation"></div>
+              </SwiperSlide>
+              <SwiperSlide>らぶぱも</SwiperSlide>
+              <SwiperSlide>Canipture!</SwiperSlide>
+              <div className="swiper-button-prev"></div>
+              <div className="swiper-button-next"></div>
             </Swiper>
-            <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>
             <div className="swiper-pagination"></div>
           </div>
         </div>
