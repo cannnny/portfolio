@@ -47,7 +47,7 @@ function App() {
     spaceBetween: 24,
     centeredSlides: true,
     autoplay: {
-      delay: 1000,
+      delay: 4000,
       disableOnInteraction: false,
       waitForTransition: false,
     },
