@@ -1,10 +1,10 @@
 import "./reset.css";
 import "./App.scss";
+import { useState, useEffect } from "react";
 
 // Swiper
-import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -21,6 +21,7 @@ import {
 import { SiAdobephotoshop, SiAdobeillustrator, SiGithub } from "react-icons/si";
 
 function App() {
+  // Page Topボタン用
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -39,16 +40,18 @@ function App() {
     });
   };
 
+  // Swiper
   const swiperParams = {
-    modules: [Navigation, Pagination],
+    modules: [Autoplay, Pagination, Navigation],
     slidesPerView: 1,
     spaceBetween: 24,
     centeredSlides: true,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    //   waitForTransition: false,
-    // },
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+      waitForTransition: false,
+    },
+    loop: true,
     grabCursor: true,
     pagination: {
       el: ".swiper-pagination",
