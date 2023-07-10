@@ -126,6 +126,10 @@ header {
   display: block;
   margin: 0 auto;
 }
+.swiper-slide a {
+  text-decoration: none;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   --swiper-navigation-color: #192f60;
