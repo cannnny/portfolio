@@ -2,6 +2,7 @@ import "./reset.css";
 import "./App.scss";
 
 // Swiper
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -10,8 +11,14 @@ import "swiper/css/pagination";
 
 // icons
 import { IoIosArrowDropupCircle } from "react-icons/io";
-import { FaAngleDown, FaHtml5, FaSass, FaReact } from "react-icons/fa";
-import { SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
+import {
+  FaAngleDown,
+  FaHtml5,
+  FaSass,
+  FaReact,
+  FaTwitter,
+} from "react-icons/fa";
+import { SiAdobephotoshop, SiAdobeillustrator, SiGithub } from "react-icons/si";
 
 function App() {
   const returnTop = () => {
@@ -20,6 +27,28 @@ function App() {
       behavior: "smooth",
     });
   };
+
+  const [isHeightOver, setIsHeightOver] = useState(false);
+
+  useEffect(() => {
+    const scrollAction = () => {
+      if (375 > window.scrollY) {
+        setIsHeightOver(true);
+      } else {
+        setIsHeightOver(false);
+      }
+    };
+
+    window.addEventListener("scroll", scrollAction, {
+      capture: false,
+      passive: true,
+    });
+    scrollAction();
+
+    return () => {
+      window.removeEventListener("scroll", scrollAction);
+    };
+  });
 
   const swiperParams = {
     modules: [Navigation, Pagination],
@@ -82,7 +111,7 @@ function App() {
           <div className="about-inner">
             <img className="portrait" src="./photo.jpg" alt="" />
             <div className="introduce">
-              <div className="career">
+              <div className="introduce-inner career">
                 <h3>堂寺ユミ（どうてらゆみ）</h3>
                 <p>2019年から某23区役所で職員として勤務。</p>
                 <p>情報・人事部門の業務に従事してきました。</p>
@@ -90,7 +119,7 @@ function App() {
               </div>
               <div className="introduce-inner skills">
                 <h3>できること</h3>
-                <div className="skill-icons">
+                <div className="icons skill-icons">
                   <FaHtml5 size={"30px"} />
                   <FaSass size={"30px"} />
                   <FaReact size={"30px"} />
@@ -128,13 +157,18 @@ function App() {
             <div className="swiper-pagination"></div>
           </div>
         </div>
-        <div className="returntop-button" onClick={returnTop}>
+        <div className={isHeightOver ? "isHeightOver" : ""} onClick={returnTop}>
           <p>Page top</p>
           <IoIosArrowDropupCircle size={"50px"} color={"#192f60"} />
         </div>
         <div className="main-container contact">
           <h2>Contact</h2>
-          <div className="contact-inner"></div>
+          <div className="contact-inner">
+            <div className="icons contact-icons">
+              <FaTwitter size={"40px"} />
+              <SiGithub size={"40px"} />
+            </div>
+          </div>
         </div>
       </div>
       <footer>
