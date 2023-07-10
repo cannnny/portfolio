@@ -21,34 +21,23 @@ import {
 import { SiAdobephotoshop, SiAdobeillustrator, SiGithub } from "react-icons/si";
 
 function App() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    window.scrollY > 300 ? setIsVisible(true) : setIsVisible(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.addEventListener("scroll", toggleVisibility);
+  }, []);
+
   const returnTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
-
-  const [isHeightOver, setIsHeightOver] = useState(false);
-
-  useEffect(() => {
-    const scrollAction = () => {
-      if (375 > window.scrollY) {
-        setIsHeightOver(true);
-      } else {
-        setIsHeightOver(false);
-      }
-    };
-
-    window.addEventListener("scroll", scrollAction, {
-      capture: false,
-      passive: true,
-    });
-    scrollAction();
-
-    return () => {
-      window.removeEventListener("scroll", scrollAction);
-    };
-  });
 
   const swiperParams = {
     modules: [Navigation, Pagination],
@@ -128,7 +117,7 @@ function App() {
                 </div>
               </div>
               <div className="introduce-inner qualifications">
-                <h3>合格歴</h3>
+                <h3>資格</h3>
                 <p>ITパスポート(2021)</p>
                 <p>情報セキュリティマネジメント試験(2022)</p>
               </div>
@@ -157,10 +146,6 @@ function App() {
             <div className="swiper-pagination"></div>
           </div>
         </div>
-        <div className={isHeightOver ? "isHeightOver" : ""} onClick={returnTop}>
-          <p>Page top</p>
-          <IoIosArrowDropupCircle size={"50px"} color={"#192f60"} />
-        </div>
         <div className="main-container contact">
           <h2>Contact</h2>
           <div className="contact-inner">
@@ -169,6 +154,16 @@ function App() {
               <SiGithub size={"40px"} />
             </div>
           </div>
+        </div>
+        <div
+          className={isVisible ? "returntop-button-show" : "returntop-button"}
+          onClick={returnTop}
+        >
+          <IoIosArrowDropupCircle
+            size={"50px"}
+            color={"#192f60"}
+            background={"#ffffff"}
+          />
         </div>
       </div>
       <footer>

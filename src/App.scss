@@ -148,13 +148,45 @@ header {
   background-color: #192f60 !important;
 }
 
-.returntop-button {
+.returntop-button-show {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  top: 85%;
-  left: 75%;
+  opacity: 1;
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+  z-index: 10;
+  animation: move-to-left 0.5s forwards;
+}
+
+.returntop-button {
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+  animation: move-to-right 0.5s forwards;
+}
+
+@keyframes move-to-left {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes move-to-right {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(100px);
+  }
 }
 
 .contact-icons {
