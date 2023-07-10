@@ -130,20 +130,20 @@ function App() {
             <Swiper {...swiperParams}>
               <SwiperSlide>
                 <a href="https://mh-weak-info.vercel.app/">
-                  <img src="./capture-mh-weak-info.png" alt="" />
-                  <p>モンハン弱点教えてくれるくん</p>
+                  <img src="./thumb-mh.png" alt="" />
                 </a>
                 <div class="explanation"></div>
               </SwiperSlide>
               <SwiperSlide>
                 <a href="https://hello-pawmo.vercel.app/">
-                  <img src="./capture-hello-pawmo.png" alt="" />
-                  <p>Hello Pawmo!</p>
+                  <img src="./thumb-hp.png" alt="" />
                 </a>
                 <div class="explanation"></div>
               </SwiperSlide>
-              <SwiperSlide>らぶぱも</SwiperSlide>
-              <SwiperSlide>Canipture!</SwiperSlide>
+              <SwiperSlide>
+                <img src="./thumb-lp.png" alt="" />
+              </SwiperSlide>
+              <SwiperSlide></SwiperSlide>
               <div className="swiper-button-prev"></div>
               <div className="swiper-button-next"></div>
             </Swiper>
