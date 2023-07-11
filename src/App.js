@@ -146,7 +146,9 @@ function App() {
               <SwiperSlide>
                 <img src="./thumb-lp.png" alt="" />
               </SwiperSlide>
-              <SwiperSlide></SwiperSlide>
+              <SwiperSlide>
+                <img src="./thumb-ca.png" alt="" />
+              </SwiperSlide>
               <div className="swiper-button-prev"></div>
               <div className="swiper-button-next"></div>
             </Swiper>
