@@ -21,7 +21,7 @@ import {
 import { SiAdobephotoshop, SiAdobeillustrator, SiGithub } from "react-icons/si";
 
 function App() {
-  // Page Topボタン用
+  // PageTopボタン用
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -41,6 +41,29 @@ function App() {
   };
 
   // Swiper
+
+  const [isSwiperEnabled, setIsSwiperEnabled] = useState(true);
+
+  const handleResize = () => {
+    const breakpoint = 600; // ブレイクポイントの幅を設定
+
+    if (window.innerWidth < breakpoint) {
+      setIsSwiperEnabled(true);
+    } else {
+      setIsSwiperEnabled(false);
+    }
+  };
+
+  useEffect(() => {
+    handleResize(); // コンポーネントがマウントされた時に初回の判定を行う
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const swiperParams = {
     modules: [Autoplay, Pagination, Navigation],
     slidesPerView: 1,
@@ -63,12 +86,8 @@ function App() {
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      600: {
-        slidesPerView: 1,
-      },
       1025: {
         slidesPerView: 4,
-        spaceBetween: 32,
       },
     },
   };
@@ -130,29 +149,38 @@ function App() {
         <div className="main-container works">
           <h2>Works</h2>
           <div className="works-inner">
-            <Swiper {...swiperParams}>
-              <SwiperSlide>
-                <a href="https://mh-weak-info.vercel.app/">
-                  <img src="./thumb-mh.png" alt="" />
-                </a>
-                <div class="explanation"></div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <a href="https://hello-pawmo.vercel.app/">
-                  <img src="./thumb-hp.png" alt="" />
-                </a>
-                <div class="explanation"></div>
-              </SwiperSlide>
-              <SwiperSlide>
+            {isSwiperEnabled ? (
+              <Swiper {...swiperParams}>
+                <SwiperSlide>
+                  <a href="https://mh-weak-info.vercel.app/">
+                    <img src="./thumb-mh.png" alt="" />
+                  </a>
+                  <div class="explanation"></div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <a href="https://hello-pawmo.vercel.app/">
+                    <img src="./thumb-hp.png" alt="" />
+                  </a>
+                  <div class="explanation"></div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./thumb-lp.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="./thumb-ca.png" alt="" />
+                </SwiperSlide>
+                <div className="swiper-button-prev"></div>
+                <div className="swiper-button-next"></div>
+                <div className="swiper-pagination"></div>
+              </Swiper>
+            ) : (
+              <div className="works-pc">
+                <img src="./thumb-mh.png" alt="" />
+                <img src="./thumb-hp.png" alt="" />
                 <img src="./thumb-lp.png" alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
                 <img src="./thumb-ca.png" alt="" />
-              </SwiperSlide>
-              <div className="swiper-button-prev"></div>
-              <div className="swiper-button-next"></div>
-            </Swiper>
-            <div className="swiper-pagination"></div>
+              </div>
+            )}
           </div>
         </div>
         <div className="main-container contact">
