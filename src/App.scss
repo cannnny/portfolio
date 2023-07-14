@@ -29,23 +29,8 @@ header {
     transform: translate(-50%, -50%);
     width: 100%;
     max-width: 360px;
-}
-
-.header-menu {
-    display: none;
-    opacity: .8;
-    position: absolute;
-    right: 0;
-    width: 60%;
-    height: 300px;
-    background-color: #333333;
-    ul {
-        list-style: none;
-        padding: 0;
-    }
-    p {
-        color: #ffffff;
-        text-decoration: none;
+    @media all and (min-width: 1024px) {
+        max-width: 600px;
     }
 }
 
@@ -56,11 +41,6 @@ header {
     opacity: .8;
     margin-top: auto;
     padding-bottom: 3px;
-    // p {
-    //   color: #ffffff;
-    //   font-size: 23px;
-    //   font-family: Arial Rounded MT bold;
-    // }
     .scroll-icon {
         animation: scrolldown 1s ease-in-out infinite both;
 
@@ -86,22 +66,43 @@ header {
 
 .main-container {
     width: 100%;
+    margin: 0 auto;
     padding: 40px 15px;
     text-align: center;
     h2 {
         font-size: 50px;
         font-family: "Yellowtail", cursive;
+        @media all and (min-width: 1024px) {
+            font-size: 60px;
+        }
+    }
+    h3 {
+        @media all and (min-width: 1024px) {
+            font-size: 20px;
+        }
     }
     p {
         padding-top: 3px;
         font-size: 15px;
+        @media all and (min-width: 1024px) {
+            font-size: 18px;
+        }
+    }
+    @media all and (min-width: 1024px) {
+        width: 60%;
+        padding: 20px 15px;
     }
 }
 
 .portrait {
     width: 30%;
-    margin: 10px auto;
+    margin: 0 auto;
     border-radius: 50%;
+    @media all and (min-width: 1024px) {
+        width: 200px;
+        height: 200px;
+        margin: 10px auto;
+    }
 }
 
 .introduce-inner {
@@ -131,6 +132,7 @@ header {
 .swiper-button-next, .swiper-button-prev {
     position: absolute;
     top: 0;
+    margin-top: calc(720 / 1280 * 100%);
 
     --swiper-navigation-color: #192f60;
     &::after {
@@ -149,10 +151,15 @@ header {
 
 .works-pc {
     display: flex;
-    justify-content: space-evenly;
     margin-top: 10px;
+
+    gap: 20px;
+    a {
+        display: block;
+        flex-basis: 25%;
+    }
     img {
-        width: 20%;
+        display: block;
     }
 }
 

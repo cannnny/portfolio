@@ -99,7 +99,7 @@ function App() {
           <h1>Cannnny!</h1>
           <img src="./logo2.png" alt="" />
         </div>
-        <div className="header-menu">
+        {/* <div className="header-menu">
           <ul>
             <li>
               <p>about</p>
@@ -111,7 +111,7 @@ function App() {
               <p>contact</p>
             </li>
           </ul>
-        </div>
+        </div> */}
         <div className="scroll">
           <FaAngleDown className="scroll-icon" size={"40px"} color={"#fff"} />
         </div>
@@ -175,10 +175,18 @@ function App() {
               </Swiper>
             ) : (
               <div className="works-pc">
-                <img src="./thumb-mh.png" alt="" />
-                <img src="./thumb-hp.png" alt="" />
-                <img src="./thumb-lp.png" alt="" />
-                <img src="./thumb-ca.png" alt="" />
+                <a href="https://mh-weak-info.vercel.app/">
+                  <img src="./thumb-mh.png" alt="" />
+                </a>
+                <a href="https://hello-pawmo.vercel.app/">
+                  <img src="./thumb-hp.png" alt="" />
+                </a>
+                <a href="https://love-pawmi.vercel.app/">
+                  <img src="./thumb-lp.png" alt="" />
+                </a>
+                <a href="https://">
+                  <img src="./thumb-ca.png" alt="" />
+                </a>
               </div>
             )}
           </div>
