@@ -16,21 +16,20 @@ header {
   background-image: url("../public/background.jpg");
   background-position: center center;
   background-size: cover;
-  h1 {
-    display: none;
-  }
-}
-
-.header-logo {
-  opacity: 0.9;
-  position: absolute;
-  top: 50%;
-  left: 51.5%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 360px;
-  @media all and (min-width: 1024px) {
-    max-width: 600px;
+  .header-logo {
+    opacity: 0.9;
+    position: absolute;
+    top: 50%;
+    left: 51.5%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 360px;
+    h1 {
+      display: none;
+    }
+    @media all and (min-width: 1024px) {
+      max-width: 600px;
+    }
   }
 }
 
@@ -46,51 +45,52 @@ header {
 
     fill: #ffffff;
   }
-}
-
-@keyframes scrolldown {
-  0% {
-    transform: translateY(4px);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
-  100% {
-    transform: translateY(4px);
+  @keyframes scrolldown {
+    0% {
+      transform: translateY(4px);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+    100% {
+      transform: translateY(4px);
+    }
   }
 }
 
 .main {
   position: relative;
-}
-
-.main-container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px 15px;
-  text-align: center;
-  h2 {
-    font-size: 50px;
-    font-family: "Yellowtail", cursive;
-    @media all and (min-width: 1024px) {
-      font-size: 60px;
+  .main-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 15px;
+    text-align: center;
+    h2 {
+      font-size: 50px;
+      font-family: "Yellowtail", cursive;
+      @media all and (min-width: 1024px) {
+        margin-top: 50px;
+        font-size: 60px;
+      }
     }
-  }
-  h3 {
-    @media all and (min-width: 1024px) {
-      font-size: 20px;
+    h3 {
+      @media all and (min-width: 1024px) {
+        margin-top: 40px;
+        font-size: 20px;
+      }
     }
-  }
-  p {
-    padding-top: 3px;
-    font-size: 15px;
-    @media all and (min-width: 1024px) {
-      font-size: 18px;
+    p {
+      margin-top: 3px;
+      font-size: 15px;
+      @media all and (min-width: 1024px) {
+        margin-top: 6px;
+        font-size: 18px;
+      }
     }
-  }
-  @media all and (min-width: 1024px) {
-    width: 60%;
-    padding: 20px 15px;
+    @media all and (min-width: 1024px) {
+      width: 60%;
+      padding: 20px 15px;
+    }
   }
 }
 
@@ -101,7 +101,7 @@ header {
   @media all and (min-width: 1024px) {
     width: 200px;
     height: 200px;
-    margin: 10px auto;
+    margin: 15px auto;
   }
 }
 
@@ -114,7 +114,6 @@ header {
   justify-content: center;
   margin-top: 5px;
 }
-
 .skill-icons {
   gap: 9px;
 }
@@ -131,25 +130,24 @@ header {
       font-size: 30px !important;
     }
   }
-}
+  .swiper-slide img {
+    display: block;
+    margin: 5px auto;
+  }
 
-.swiper-slide img {
-  display: block;
-  margin: 5px auto;
-}
+  .swiper-pagination {
+    position: initial !important;
+    margin-top: 20px;
+  }
 
-.swiper-pagination {
-  position: initial !important;
-  margin-top: 20px;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #192f60 !important;
+  .swiper-pagination-bullet-active {
+    background-color: #192f60 !important;
+  }
 }
 
 .works-pc {
   display: flex;
-  margin-top: 10px;
+  margin-top: 20px;
 
   gap: 20px;
   a {
@@ -212,8 +210,15 @@ footer {
   align-items: center;
   height: 40px;
   background-color: #192f60;
+  @media all and (min-width: 1024px) {
+    height: 50px;
+    margin-top: 30px;
+  }
   p {
     color: #ffffff;
     font-size: 12px;
+    @media all and (min-width: 1024px) {
+      font-size: 15px;
+    }
   }
 }
