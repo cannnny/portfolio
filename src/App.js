@@ -45,7 +45,7 @@ function App() {
   const [isSwiperEnabled, setIsSwiperEnabled] = useState(true);
 
   const handleResize = () => {
-    const breakpoint = 600; // ブレイクポイントの幅を設定
+    const breakpoint = 600; //
 
     if (window.innerWidth < breakpoint) {
       setIsSwiperEnabled(true);
@@ -150,7 +150,7 @@ function App() {
           <h2>Works</h2>
           <div className="works-inner">
             {isSwiperEnabled ? (
-              <Swiper {...swiperParams}>
+              <Swiper {...swiperParams} className="swiper">
                 <SwiperSlide>
                   <a href="https://mh-weak-info.vercel.app/">
                     <img src="./thumb-mh.png" alt="" />
