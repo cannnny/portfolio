@@ -155,16 +155,16 @@ function App() {
                   <a href="https://mh-weak-info.vercel.app/">
                     <img src="./thumb-mh.png" alt="" />
                   </a>
-                  <div class="explanation"></div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <a href="https://hello-pawmo.vercel.app/">
                     <img src="./thumb-hp.png" alt="" />
                   </a>
-                  <div class="explanation"></div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="./thumb-lp.png" alt="" />
+                  <a href="https://love-pawmi.vercel.app">
+                    <img src="./thumb-lp.png" alt="" />
+                  </a>
                 </SwiperSlide>
                 <SwiperSlide>
                   <img src="./thumb-ca.png" alt="" />
@@ -184,7 +184,7 @@ function App() {
                 <a href="https://love-pawmi.vercel.app/">
                   <img src="./thumb-lp.png" alt="" />
                 </a>
-                <a href="https://">
+                <a href="https://canipture.vercel.app/">
                   <img src="./thumb-ca.png" alt="" />
                 </a>
               </div>
