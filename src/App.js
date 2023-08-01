@@ -77,7 +77,7 @@ function App() {
             <div className="introduce">
               <div className="introduce-inner career">
                 <h3>堂寺ユミ（どうてらゆみ）</h3>
-                <p>2019年から某23区役所で職員として勤務。</p>
+                <p>2019年から4年ほど、練馬区役所で職員として勤務。</p>
                 <p>情報・人事部門の業務に従事してきました。</p>
                 <p>プログラミングは独学です。</p>
               </div>
