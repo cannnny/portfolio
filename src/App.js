@@ -1,14 +1,7 @@
 import "./reset.css";
 import "./App.scss";
-import { useState, useEffect } from "react";
 import Slider from "./components/Slider.jsx";
-
-// Swiper
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, Pagination, Navigation } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
+import Works from "./components/Works.jsx";
 
 // icons
 import { IoIosArrowDropupCircle } from "react-icons/io";
@@ -20,6 +13,8 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { SiAdobephotoshop, SiAdobeillustrator, SiGithub } from "react-icons/si";
+
+import { useState, useEffect } from "react";
 
 function App() {
   // PageTopボタン用
@@ -40,8 +35,6 @@ function App() {
       behavior: "smooth",
     });
   };
-
-  // Swiper
 
   const [isSwiperEnabled, setIsSwiperEnabled] = useState(true);
 
@@ -64,34 +57,6 @@ function App() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  // const swiperParams = {
-  //   modules: [Autoplay, Pagination, Navigation],
-  //   slidesPerView: 1,
-  //   spaceBetween: 24,
-  //   centeredSlides: true,
-  //   autoplay: {
-  //     delay: 4000,
-  //     disableOnInteraction: false,
-  //     waitForTransition: false,
-  //   },
-  //   loop: true,
-  //   grabCursor: true,
-  //   pagination: {
-  //     el: ".swiper-pagination",
-  //     clickable: true,
-  //     type: "bullets",
-  //   },
-  //   navigation: {
-  //     nextEl: ".swiper-button-next",
-  //     prevEl: ".swiper-button-prev",
-  //   },
-  //   breakpoints: {
-  //     1025: {
-  //       slidesPerView: 4,
-  //     },
-  //   },
-  // };
 
   return (
     <div className="App">
@@ -137,24 +102,7 @@ function App() {
         <div className="main-container works">
           <h2>Works</h2>
           <div className="works-inner">
-            {isSwiperEnabled ? (
-              <Slider />
-            ) : (
-              <div className="works-pc">
-                <a href="https://mh-weak-info.vercel.app/">
-                  <img src="./thumb-mh.png" alt="" />
-                </a>
-                <a href="https://hello-pawmo.vercel.app/">
-                  <img src="./thumb-hp.png" alt="" />
-                </a>
-                <a href="https://love-pawmi.vercel.app/">
-                  <img src="./thumb-lp.png" alt="" />
-                </a>
-                <a href="https://canipture.vercel.app/">
-                  <img src="./thumb-ca.png" alt="" />
-                </a>
-              </div>
-            )}
+            {isSwiperEnabled ? <Slider /> : <Works />}
           </div>
         </div>
         <div className="main-container contact">
