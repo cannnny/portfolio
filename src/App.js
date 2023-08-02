@@ -49,7 +49,7 @@ function App() {
   };
 
   useEffect(() => {
-    handleResize(); // コンポーネントがマウントされた時に初回の判定を行う
+    handleResize();
 
     window.addEventListener("resize", handleResize);
 
