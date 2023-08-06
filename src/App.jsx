@@ -1,7 +1,7 @@
 import "./reset.css";
 import "./App.scss";
 import Slider from "./components/Slider.jsx";
-import Works from "./components/Works.jsx";
+import Works from "./components/works/Works.jsx";
 
 // icons
 import { IoIosArrowDropupCircle } from "react-icons/io";
@@ -36,6 +36,7 @@ function App() {
     });
   };
 
+  // worksスライダー用
   const [isSwiperEnabled, setIsSwiperEnabled] = useState(true);
 
   const handleResize = () => {
@@ -57,6 +58,25 @@ function App() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const worksData = [
+    {
+      url: "https://mh-weak-info.vercel.app/",
+      img: "thumb-mh.png",
+    },
+    {
+      url: "https://hello-pawmo.vercel.app/",
+      img: "thumb-hp.png",
+    },
+    {
+      url: "https://love-pawmi.vercel.app/",
+      img: "thumb-lp.png",
+    },
+    {
+      url: "https://canipture.vercel.app/",
+      img: "thumb-ca.png",
+    },
+  ];
 
   return (
     <div className="App">
@@ -104,7 +124,11 @@ function App() {
         <div className="main-container works">
           <h2>Works</h2>
           <div className="works-inner">
-            {isSwiperEnabled ? <Slider /> : <Works />}
+            {isSwiperEnabled ? (
+              <Slider data={worksData} />
+            ) : (
+              <Works data={worksData} />
+            )}
           </div>
         </div>
         <div className="main-container contact">

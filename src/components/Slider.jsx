@@ -25,6 +25,7 @@ const swiperParams = {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  // sp-tabletのみでこのコンポーネントを有効にしているので、以下が発動することはない。不要
   breakpoints: {
     1025: {
       slidesPerView: 4,
@@ -32,31 +33,20 @@ const swiperParams = {
   },
 };
 
-const Slider = () => {
+const Slider = (props) => {
   return (
     <>
       <Swiper {...swiperParams} className="swiper">
         {/* ここmapにできる */}
-        <SwiperSlide>
-          <a href="https://mh-weak-info.vercel.app/">
-            <img src="./thumb-mh.png" alt="" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="https://hello-pawmo.vercel.app/">
-            <img src="./thumb-hp.png" alt="" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="https://love-pawmi.vercel.app/">
-            <img src="./thumb-lp.png" alt="" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="https://canipture.vercel.app/">
-            <img src="./thumb-ca.png" alt="" />
-          </a>
-        </SwiperSlide>
+        {props.data.map((item, index) => {
+          return (
+            <SwiperSlide key={index}>
+              <a href={item.url}>
+                <img src={`./${item.img}`} alt="" />
+              </a>
+            </SwiperSlide>
+          );
+        })}
         <div className="swiper-button-prev"></div>
         <div className="swiper-button-next"></div>
         <div className="swiper-pagination"></div>

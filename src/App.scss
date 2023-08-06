@@ -168,21 +168,6 @@ header {
   }
 }
 
-// worksコンポーネントなら個別にすべき。
-.works-pc {
-  display: flex;
-  margin-top: 20px;
-
-  gap: 20px;
-  a {
-    display: block;
-    flex-basis: 25%;
-  }
-  img {
-    display: block;
-  }
-}
-
 // returnTop-buttonと共通の記述があるのでshowクラスを切り分けてそれが切り替わるようにしたい。
 .returntop-button-show {
   display: flex;

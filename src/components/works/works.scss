@@ -1,0 +1,13 @@
+// worksコンポーネントなら個別にすべき。
+.works-pc {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  a {
+    display: block;
+    flex-basis: 25%;
+  }
+  img {
+    display: block;
+  }
+}
