@@ -36,6 +36,7 @@ const Slider = () => {
   return (
     <>
       <Swiper {...swiperParams} className="swiper">
+        {/* ここmapにできる */}
         <SwiperSlide>
           <a href="https://mh-weak-info.vercel.app/">
             <img src="./thumb-mh.png" alt="" />

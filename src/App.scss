@@ -50,6 +50,7 @@ header {
       }
     }
 
+    // メディアクエリはmixinにしたい。
     @media all and (min-width: 1024px) {
       max-width: 600px;
     }
@@ -65,7 +66,6 @@ header {
   padding-bottom: 3px;
   .scroll-icon {
     animation: scrolldown 1s ease-in-out infinite both;
-
     fill: #ffffff;
   }
   @keyframes scrolldown {
@@ -168,6 +168,7 @@ header {
   }
 }
 
+// worksコンポーネントなら個別にすべき。
 .works-pc {
   display: flex;
   margin-top: 20px;
@@ -182,6 +183,7 @@ header {
   }
 }
 
+// returnTop-buttonと共通の記述があるのでshowクラスを切り分けてそれが切り替わるようにしたい。
 .returntop-button-show {
   display: flex;
   flex-direction: column;

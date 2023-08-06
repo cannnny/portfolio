@@ -39,7 +39,7 @@ function App() {
   const [isSwiperEnabled, setIsSwiperEnabled] = useState(true);
 
   const handleResize = () => {
-    const breakpoint = 600; //
+    const breakpoint = 600; //ここのブレイクポイントは1024のが妥当では？
 
     if (window.innerWidth < breakpoint) {
       setIsSwiperEnabled(true);
@@ -60,6 +60,7 @@ function App() {
 
   return (
     <div className="App">
+      {/* headerではないかも。mvが妥当 */}
       <header>
         <div className="header-logo">
           <h1>Cannnny!</h1>
@@ -70,6 +71,7 @@ function App() {
         </div>
       </header>
       <div className="main">
+        {/* main-containerをコンポーネント化できるかも */}
         <div className="main-container about">
           <h2>About</h2>
           <div className="about-inner">

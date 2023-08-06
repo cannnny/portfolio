@@ -1,6 +1,7 @@
 const Works = () => {
   return (
     <div className="works-pc">
+      {/* ここmapにできる */}
       <a href="https://mh-weak-info.vercel.app/">
         <img src="./thumb-mh.png" alt="" />
       </a>
