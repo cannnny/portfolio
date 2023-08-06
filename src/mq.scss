@@ -1,0 +1,12 @@
+// メディアクエリは関数にすると取り回しやすい。
+$breakpoint: (
+  // min-width
+  "sm": "screen and (min-width: 400px)",
+  "md": "screen and (min-width: 740px)",
+  "lg": "screen and (min-width: 1024px)"
+) !default;
+@mixin mq($defaultSize: lg) {
+  @media #{map-get($breakpoint, $defaultSize)} {
+    @content;
+  }
+}

@@ -1,4 +1,8 @@
+// メディアクエリ用関数は各cssで読み込む必要あり。
+@use "./mq.scss" as *;
+
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat&family=Comfortaa&family=Dancing+Script&family=Dosis&family=Kalam&family=Lobster&family=M+PLUS+Rounded+1c&family=Marck+Script&family=Pacifico&family=Rubik&family=Sacramento&family=Satisfy&family=Shadows+Into+Light&family=Yellowtail&display=swap");
+// ↑使ってないフォントまで読み込んでいる
 
 * {
   color: #192f60;
@@ -51,7 +55,7 @@ header {
     }
 
     // メディアクエリはmixinにしたい。
-    @media all and (min-width: 1024px) {
+    @include mq() {
       max-width: 600px;
     }
   }
@@ -91,13 +95,13 @@ header {
     h2 {
       font-size: 50px;
       font-family: "Yellowtail", cursive;
-      @media all and (min-width: 1024px) {
+      @include mq() {
         margin-top: 50px;
         font-size: 60px;
       }
     }
     h3 {
-      @media all and (min-width: 1024px) {
+      @include mq() {
         margin-top: 40px;
         font-size: 20px;
       }
@@ -105,12 +109,12 @@ header {
     p {
       margin-top: 3px;
       font-size: 15px;
-      @media all and (min-width: 1024px) {
+      @include mq() {
         margin-top: 6px;
         font-size: 18px;
       }
     }
-    @media all and (min-width: 1024px) {
+    @include mq() {
       width: 60%;
       padding: 20px 15px;
     }
@@ -121,7 +125,7 @@ header {
   width: 30%;
   margin: 0 auto;
   border-radius: 50%;
-  @media all and (min-width: 1024px) {
+  @include mq() {
     width: 200px;
     height: 200px;
     margin: 15px auto;
@@ -216,14 +220,14 @@ footer {
   align-items: center;
   height: 40px;
   background-color: #192f60;
-  @media all and (min-width: 1024px) {
+  @include mq() {
     height: 50px;
     margin-top: 30px;
   }
   p {
     color: #ffffff;
     font-size: 12px;
-    @media all and (min-width: 1024px) {
+    @include mq() {
       font-size: 15px;
     }
   }
