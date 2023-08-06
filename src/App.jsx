@@ -140,8 +140,11 @@ function App() {
             </div>
           </div>
         </div>
+        {/*  returnTop-buttonと共通の記述があるので、showクラスを切り分けてそれが切り替わるようにした。 */}
         <div
-          className={isVisible ? "returntop-button-show" : "returntop-button"}
+          className={
+            !isVisible ? "return-top-button" : "return-top-button show"
+          }
           onClick={returnTop}
         >
           <IoIosArrowDropupCircle
