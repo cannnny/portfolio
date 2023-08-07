@@ -6,8 +6,13 @@
   a {
     display: block;
     flex-basis: 25%;
+    background-color: #000000;
   }
   img {
     display: block;
+    &:hover {
+      opacity: 0.8;
+      transition: 0.2s;
+    }
   }
 }
