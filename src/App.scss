@@ -210,10 +210,6 @@
 }
 
 .button svg {
-  &::after {
-    border-radius: 50%;
-    background-color: #ffffff;
-  }
   &:hover {
     opacity: 0.6;
   }
