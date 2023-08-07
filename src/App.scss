@@ -171,6 +171,7 @@
   position: fixed;
   right: 5%;
   bottom: 10%;
+  cursor: pointer;
   animation: move-to-right 0.5s forwards;
   &.show {
     display: flex;
@@ -206,10 +207,6 @@
 
 .contact-icons {
   gap: 10px;
-}
-
-.button :hover {
-  color: #c9caca;
 }
 
 footer {
