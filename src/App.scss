@@ -212,6 +212,7 @@
 .button svg {
   &:hover {
     opacity: 0.6;
+    transition: 0.2s;
   }
 }
 
