@@ -1,7 +1,7 @@
 import "./reset.css";
 import "./App.scss";
 import Slider from "./components/Slider.jsx";
-import Works from "./components/Works.jsx";
+import Works from "./components/works/Works.jsx";
 
 // icons
 import { IoIosArrowDropupCircle } from "react-icons/io";
@@ -36,10 +36,11 @@ function App() {
     });
   };
 
+  // worksスライダー用
   const [isSwiperEnabled, setIsSwiperEnabled] = useState(true);
 
   const handleResize = () => {
-    const breakpoint = 600; //
+    const breakpoint = 600; //ここのブレイクポイントは1024のが妥当では？
 
     if (window.innerWidth < breakpoint) {
       setIsSwiperEnabled(true);
@@ -58,8 +59,28 @@ function App() {
     };
   }, []);
 
+  const worksData = [
+    {
+      url: "https://mh-weak-info.vercel.app/",
+      img: "thumb-mh.png",
+    },
+    {
+      url: "https://hello-pawmo.vercel.app/",
+      img: "thumb-hp.png",
+    },
+    {
+      url: "https://love-pawmi.vercel.app/",
+      img: "thumb-lp.png",
+    },
+    {
+      url: "https://canipture.vercel.app/",
+      img: "thumb-ca.png",
+    },
+  ];
+
   return (
     <div className="App">
+      {/* headerではないかも。mvが妥当 */}
       <header>
         <div className="header-logo">
           <h1>Cannnny!</h1>
@@ -70,6 +91,7 @@ function App() {
         </div>
       </header>
       <div className="main">
+        {/* main-containerをコンポーネント化できるかも */}
         <div className="main-container about">
           <h2>About</h2>
           <div className="about-inner">
@@ -102,7 +124,11 @@ function App() {
         <div className="main-container works">
           <h2>Works</h2>
           <div className="works-inner">
-            {isSwiperEnabled ? <Slider /> : <Works />}
+            {isSwiperEnabled ? (
+              <Slider data={worksData} />
+            ) : (
+              <Works data={worksData} />
+            )}
           </div>
         </div>
         <div className="main-container contact">
@@ -114,8 +140,11 @@ function App() {
             </div>
           </div>
         </div>
+        {/*  returnTop-buttonと共通の記述があるので、showクラスを切り分けてそれが切り替わるようにした。 */}
         <div
-          className={isVisible ? "returntop-button-show" : "returntop-button"}
+          className={
+            !isVisible ? "return-top-button" : "return-top-button show"
+          }
           onClick={returnTop}
         >
           <IoIosArrowDropupCircle
