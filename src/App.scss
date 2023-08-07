@@ -208,6 +208,10 @@
   gap: 10px;
 }
 
+.button :hover {
+  color: #c9caca;
+}
+
 footer {
   @include mq() {
     height: 50px;

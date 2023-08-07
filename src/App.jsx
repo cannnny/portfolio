@@ -133,15 +133,21 @@ function App() {
         <div className="main-container contact">
           <h2>Contact</h2>
           <div className="contact-inner">
-            <div className="icons contact-icons">
-              <FaTwitter size={"40px"} />
-              <SiGithub size={"40px"} />
+            <div className="icons contact-icons button">
+              <a href="https://twitter.com/canypuff" alt="">
+                <FaTwitter size={"40px"} />
+              </a>
+              <a href="https://github.com/cannnny" alt="">
+                <SiGithub size={"40px"} />
+              </a>
             </div>
           </div>
         </div>
         <div
           className={
-            !isVisible ? "return-top-button" : "return-top-button show"
+            !isVisible
+              ? "button return-top-button"
+              : "button return-top-button show"
           }
           onClick={returnTop}
         >
