@@ -209,6 +209,16 @@
   gap: 10px;
 }
 
+.button svg {
+  &::after {
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
 footer {
   @include mq() {
     height: 50px;
