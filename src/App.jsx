@@ -86,7 +86,7 @@ function App() {
           <img src="./logo2.png" alt="" />
         </div>
         <div className="scroll">
-          <FaAngleDown className="scroll-icon" size={"40px"} color={"#fff"} />
+          <FaAngleDown className="scroll-icon" size={"40px"} />
         </div>
       </div>
       <div className="main">
@@ -133,7 +133,7 @@ function App() {
         <div className="main-container contact">
           <h2>Contact</h2>
           <div className="contact-inner">
-            <div className="icons contact-icons button">
+            <div className="icons button contact-icons">
               <a href="https://twitter.com/canypuff" alt="">
                 <FaTwitter size={"40px"} />
               </a>
@@ -151,11 +151,7 @@ function App() {
           }
           onClick={returnTop}
         >
-          <IoIosArrowDropupCircle
-            size={"50px"}
-            color={"#192f60"}
-            background={"#ffffff"}
-          />
+          <IoIosArrowDropupCircle className="button" size={"60px"} />
         </div>
       </div>
       <footer>
