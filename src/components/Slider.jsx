@@ -25,19 +25,12 @@ const swiperParams = {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // sp-tabletのみでこのコンポーネントを有効にしているので、以下が発動することはない。不要
-  breakpoints: {
-    1025: {
-      slidesPerView: 4,
-    },
-  },
 };
 
 const Slider = (props) => {
   return (
     <>
       <Swiper {...swiperParams} className="swiper">
-        {/* ここmapにできる */}
         {props.data.map((item, index) => {
           return (
             <SwiperSlide key={index}>

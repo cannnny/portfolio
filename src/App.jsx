@@ -40,7 +40,7 @@ function App() {
   const [isSwiperEnabled, setIsSwiperEnabled] = useState(true);
 
   const handleResize = () => {
-    const breakpoint = 600; //ここのブレイクポイントは1024のが妥当では？
+    const breakpoint = 1024;
 
     if (window.innerWidth < breakpoint) {
       setIsSwiperEnabled(true);
@@ -80,8 +80,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* headerではないかも。mvが妥当 */}
-      <header>
+      <div className="mv">
         <div className="header-logo">
           <h1>Cannnny!</h1>
           <img src="./logo2.png" alt="" />
@@ -89,7 +88,7 @@ function App() {
         <div className="scroll">
           <FaAngleDown className="scroll-icon" size={"40px"} color={"#fff"} />
         </div>
-      </header>
+      </div>
       <div className="main">
         {/* main-containerをコンポーネント化できるかも */}
         <div className="main-container about">
@@ -140,7 +139,6 @@ function App() {
             </div>
           </div>
         </div>
-        {/*  returnTop-buttonと共通の記述があるので、showクラスを切り分けてそれが切り替わるようにした。 */}
         <div
           className={
             !isVisible ? "return-top-button" : "return-top-button show"

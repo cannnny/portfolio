@@ -1,15 +1,13 @@
-// メディアクエリ用関数は各cssで読み込む必要あり。
 @use "./mq.scss" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat&family=Comfortaa&family=Dancing+Script&family=Dosis&family=Kalam&family=Lobster&family=M+PLUS+Rounded+1c&family=Marck+Script&family=Pacifico&family=Rubik&family=Sacramento&family=Satisfy&family=Shadows+Into+Light&family=Yellowtail&display=swap");
-// ↑使ってないフォントまで読み込んでいる
+@import url("https://fonts.googleapis.com/css2?family=Mulish&family=Yellowtail&display=swap");
 
 * {
   color: #192f60;
   font-family: "Mulish", sans-serif;
 }
 
-header {
+.mv {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,17 +19,18 @@ header {
   background-position: center center;
   background-size: cover;
   .header-logo {
+    @include mq() {
+      max-width: 600px;
+    }
     opacity: 0.9;
     position: absolute;
     width: 100%;
     max-width: 360px;
     overflow: hidden;
     animation: logo-visible-parent 0.8s ease-in;
-
     h1 {
       display: none;
     }
-
     img {
       animation: logo-visible-child 0.8s ease-in;
     }
@@ -53,11 +52,6 @@ header {
         transform: translateX(0%);
       }
     }
-
-    // メディアクエリはmixinにしたい。
-    @include mq() {
-      max-width: 600px;
-    }
   }
 }
 
@@ -70,6 +64,7 @@ header {
   padding-bottom: 3px;
   .scroll-icon {
     animation: scrolldown 1s ease-in-out infinite both;
+
     fill: #ffffff;
   }
   @keyframes scrolldown {
@@ -88,17 +83,21 @@ header {
 .main {
   position: relative;
   .main-container {
+    @include mq() {
+      width: 60%;
+      padding: 20px 15px;
+    }
     width: 100%;
     margin: 0 auto;
     padding: 40px 15px;
     text-align: center;
     h2 {
-      font-size: 50px;
-      font-family: "Yellowtail", cursive;
       @include mq() {
         margin-top: 50px;
         font-size: 60px;
       }
+      font-size: 50px;
+      font-family: "Yellowtail", cursive;
     }
     h3 {
       @include mq() {
@@ -107,29 +106,25 @@ header {
       }
     }
     p {
-      margin-top: 3px;
-      font-size: 15px;
       @include mq() {
         margin-top: 6px;
         font-size: 18px;
       }
-    }
-    @include mq() {
-      width: 60%;
-      padding: 20px 15px;
+      margin-top: 3px;
+      font-size: 15px;
     }
   }
 }
 
 .portrait {
-  width: 30%;
-  margin: 0 auto;
-  border-radius: 50%;
   @include mq() {
     width: 200px;
     height: 200px;
     margin: 15px auto;
   }
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 50%;
 }
 
 .introduce-inner {
@@ -172,7 +167,6 @@ header {
   }
 }
 
-// returnTop-buttonと共通の記述があるので、showクラスを切り分けてそれが切り替わるようにしたい。
 .return-top-button {
   position: fixed;
   right: 5%;
@@ -215,20 +209,20 @@ header {
 }
 
 footer {
+  @include mq() {
+    height: 50px;
+    margin-top: 30px;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
   height: 40px;
   background-color: #192f60;
-  @include mq() {
-    height: 50px;
-    margin-top: 30px;
-  }
   p {
-    color: #ffffff;
-    font-size: 12px;
     @include mq() {
       font-size: 15px;
     }
+    color: #ffffff;
+    font-size: 12px;
   }
 }
