@@ -62,19 +62,19 @@ function App() {
   const worksData = [
     {
       url: "https://mh-weak-info.vercel.app/",
-      img: "thumb-mh.png",
+      img: "thumb-mh.jpg",
     },
     {
       url: "https://hello-pawmo.vercel.app/",
-      img: "thumb-hp.png",
+      img: "thumb-hp.jpg",
     },
     {
       url: "https://love-pawmi.vercel.app/",
-      img: "thumb-lp.png",
+      img: "thumb-lp.jpg",
     },
     {
       url: "https://canipture.vercel.app/",
-      img: "thumb-ca.png",
+      img: "thumb-ca.jpg",
     },
   ];
 
