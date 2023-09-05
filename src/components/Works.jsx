@@ -1,4 +1,4 @@
-import "./works.scss";
+import "./stylesheets/works.scss";
 
 const Works = (props) => {
   return (
