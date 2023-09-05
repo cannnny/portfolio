@@ -1,6 +1,7 @@
 import "./reset.css";
 import "./App.scss";
 import MainVisual from "./components/MainVisual";
+import About from "./components/About";
 import Slider from "./components/Slider";
 import Works from "./components/Works";
 
@@ -78,35 +79,7 @@ function App() {
       <MainVisual />
       <div className="main">
         {/* main-containerをコンポーネント化できるかも */}
-        <div className="main-container about">
-          <h2>About</h2>
-          <div className="about-inner">
-            <img className="portrait" src="./photo.jpg" alt="" />
-            <div className="introduce">
-              <div className="introduce-inner career">
-                <h3>堂寺ユミ（どうてらゆみ）</h3>
-                <p>2019年から4年ほど、練馬区役所で職員として勤務。</p>
-                <p>情報・人事部門の業務に従事してきました。</p>
-                <p>プログラミングは独学です。</p>
-              </div>
-              <div className="introduce-inner skills">
-                <h3>できること</h3>
-                <div className="icons skill-icons">
-                  <FaHtml5 size={"30px"} />
-                  <FaSass size={"30px"} />
-                  <FaReact size={"30px"} />
-                  <SiAdobephotoshop size={"30px"} />
-                  <SiAdobeillustrator size={"30px"} />
-                </div>
-              </div>
-              <div className="introduce-inner qualifications">
-                <h3>資格</h3>
-                <p>ITパスポート(2021)</p>
-                <p>情報セキュリティマネジメント試験(2022)</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <About />
         <div className="main-container works">
           <h2>Works</h2>
           <div className="works-inner">

@@ -1,0 +1,16 @@
+@use "../../mq.scss" as *;
+
+.portrait {
+  @include mq() {
+    width: 200px;
+    height: 200px;
+    margin: 15px auto;
+  }
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.introduce-inner {
+  margin-top: 30px;
+}
