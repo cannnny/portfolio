@@ -4,11 +4,10 @@ import MainVisual from "./components/MainVisual";
 import About from "./components/About";
 import Slider from "./components/Slider";
 import Works from "./components/Works";
+import Contact from "./components/Contact";
 
 // icons
 import { IoIosArrowDropupCircle } from "react-icons/io";
-import { FaHtml5, FaSass, FaReact, FaTwitter } from "react-icons/fa";
-import { SiAdobephotoshop, SiAdobeillustrator, SiGithub } from "react-icons/si";
 
 import { useState, useEffect } from "react";
 
@@ -78,7 +77,6 @@ function App() {
     <div className="App">
       <MainVisual />
       <div className="main">
-        {/* main-containerをコンポーネント化できるかも */}
         <About />
         <div className="main-container works">
           <h2>Works</h2>
@@ -90,19 +88,7 @@ function App() {
             )}
           </div>
         </div>
-        <div className="main-container contact">
-          <h2>Contact</h2>
-          <div className="contact-inner">
-            <div className="icons button contact-icons">
-              <a href="https://twitter.com/canypuff" alt="">
-                <FaTwitter size={"40px"} />
-              </a>
-              <a href="https://github.com/cannnny" alt="">
-                <SiGithub size={"40px"} />
-              </a>
-            </div>
-          </div>
-        </div>
+        <Contact />
         <div
           className={
             !isVisible
