@@ -1,17 +1,12 @@
 import "./reset.css";
 import "./App.scss";
-import Slider from "./components/Slider.jsx";
-import Works from "./components/works/Works.jsx";
+import MainVisual from "./components/MainVisual";
+import Slider from "./components/Slider";
+import Works from "./components/Works";
 
 // icons
 import { IoIosArrowDropupCircle } from "react-icons/io";
-import {
-  FaAngleDown,
-  FaHtml5,
-  FaSass,
-  FaReact,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaHtml5, FaSass, FaReact, FaTwitter } from "react-icons/fa";
 import { SiAdobephotoshop, SiAdobeillustrator, SiGithub } from "react-icons/si";
 
 import { useState, useEffect } from "react";
@@ -80,15 +75,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="mv">
-        <div className="header-logo">
-          <h1>Cannnny!</h1>
-          <img src="./logo2.png" alt="" />
-        </div>
-        <div className="scroll">
-          <FaAngleDown className="scroll-icon" size={"40px"} />
-        </div>
-      </div>
+      <MainVisual />
       <div className="main">
         {/* main-containerをコンポーネント化できるかも */}
         <div className="main-container about">
