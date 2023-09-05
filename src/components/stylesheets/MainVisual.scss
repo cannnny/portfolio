@@ -46,4 +46,29 @@
       }
     }
   }
+
+  .scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.8;
+    margin-top: auto;
+    padding-bottom: 3px;
+    .scroll-icon {
+      animation: scrolldown 1s ease-in-out infinite both;
+
+      fill: #ffffff;
+    }
+    @keyframes scrolldown {
+      0% {
+        transform: translateY(4px);
+      }
+      50% {
+        transform: translateY(-4px);
+      }
+      100% {
+        transform: translateY(4px);
+      }
+    }
+  }
 }
