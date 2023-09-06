@@ -32,15 +32,15 @@ function App() {
   };
 
   // worksスライダー用
-  const [isSwiperEnabled, setIsSwiperEnabled] = useState(true);
+  const [isPc, setisPc] = useState(true);
 
   const handleResize = () => {
     const breakpoint = 1024;
 
-    if (window.innerWidth < breakpoint) {
-      setIsSwiperEnabled(true);
+    if (window.innerWidth > breakpoint) {
+      setisPc(true);
     } else {
-      setIsSwiperEnabled(false);
+      setisPc(false);
     }
   };
 
@@ -81,10 +81,10 @@ function App() {
         <div className="contents works">
           <h2>Works</h2>
           <div className="works-inner">
-            {isSwiperEnabled ? (
-              <SpSlider data={worksData} />
-            ) : (
+            {isPc ? (
               <PcSlider data={worksData} />
+            ) : (
+              <SpSlider data={worksData} />
             )}
           </div>
         </div>
