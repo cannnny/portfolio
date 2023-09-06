@@ -1,4 +1,4 @@
-import "./stylesheets/SpSlider.scss";
+import "./stylesheets/SpWorks.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -28,7 +28,7 @@ const swiperParams = {
   },
 };
 
-const SpSlider = (props) => {
+const SpWorks = (props) => {
   return (
     <>
       <Swiper {...swiperParams} className="swiper border">
@@ -49,4 +49,4 @@ const SpSlider = (props) => {
   );
 };
 
-export default SpSlider;
+export default SpWorks;

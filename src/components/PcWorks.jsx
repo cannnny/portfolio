@@ -1,4 +1,4 @@
-import "./stylesheets/PcSlider.scss";
+import "./stylesheets/PcWorks.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -35,7 +35,7 @@ const mainSwiperParams = {
   thumbs: { swiper: thumbSwiperParams },
 };
 
-const PcSlider = (props) => {
+const PcWorks = (props) => {
   return (
     <>
       <Swiper {...mainSwiperParams} className="swiper border">
@@ -55,7 +55,7 @@ const PcSlider = (props) => {
       <Swiper {...thumbSwiperParams} className="swiper swiper-thumb">
         {props.data.map((item, index) => {
           return (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={item}>
               <a href={item.url}>
                 <img src={`./${item.img}`} alt="" />
               </a>
@@ -70,4 +70,4 @@ const PcSlider = (props) => {
   );
 };
 
-export default PcSlider;
+export default PcWorks;

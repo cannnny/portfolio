@@ -2,8 +2,8 @@ import "./reset.css";
 import "./App.scss";
 import MainVisual from "./components/MainVisual";
 import About from "./components/About";
-import SpSlider from "./components/SpSlider";
-import PcSlider from "./components/PcSlider";
+import SpWorks from "./components/SpWorks";
+import PcWorks from "./components/PcWorks";
 // import Contact from "./components/Contact";
 
 // icons
@@ -81,11 +81,7 @@ function App() {
         <div className="contents works">
           <h2>Works</h2>
           <div className="works-inner">
-            {isPc ? (
-              <PcSlider data={worksData} />
-            ) : (
-              <SpSlider data={worksData} />
-            )}
+            {isPc ? <PcWorks data={worksData} /> : <SpWorks data={worksData} />}
           </div>
         </div>
         {/* <Contact /> */}
