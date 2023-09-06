@@ -4,7 +4,7 @@ import MainVisual from "./components/MainVisual";
 import About from "./components/About";
 import Slider from "./components/Slider";
 import Works from "./components/Works";
-import Contact from "./components/Contact";
+// import Contact from "./components/Contact";
 
 // icons
 import { IoIosArrowDropupCircle } from "react-icons/io";
@@ -78,7 +78,7 @@ function App() {
       <MainVisual />
       <div className="main">
         <About />
-        <div className="main-container works">
+        <div className="contents works">
           <h2>Works</h2>
           <div className="works-inner">
             {isSwiperEnabled ? (
@@ -88,7 +88,7 @@ function App() {
             )}
           </div>
         </div>
-        <Contact />
+        {/* <Contact /> */}
         <div
           className={
             !isVisible
