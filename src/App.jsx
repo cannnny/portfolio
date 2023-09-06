@@ -2,8 +2,8 @@ import "./reset.css";
 import "./App.scss";
 import MainVisual from "./components/MainVisual";
 import About from "./components/About";
-import Slider from "./components/Slider";
-import Works from "./components/Works";
+import SpSlider from "./components/SpSlider";
+import PcSlider from "./components/PcSlider";
 // import Contact from "./components/Contact";
 
 // icons
@@ -82,9 +82,9 @@ function App() {
           <h2>Works</h2>
           <div className="works-inner">
             {isSwiperEnabled ? (
-              <Slider data={worksData} />
+              <SpSlider data={worksData} />
             ) : (
-              <Works data={worksData} />
+              <PcSlider data={worksData} />
             )}
           </div>
         </div>
