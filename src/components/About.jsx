@@ -5,9 +5,9 @@ import { SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
 
 const About = () => {
   return (
-    <div className="main-container about">
+    <div className="contents about">
       <h2>About</h2>
-      <div className="about-inner">
+      <div className="about-inner border">
         <img className="portrait" src="./photo.jpg" alt="" />
         <div className="introduce">
           <div className="introduce-inner career">
@@ -19,11 +19,11 @@ const About = () => {
           <div className="introduce-inner skills">
             <h3>できること</h3>
             <div className="icons skill-icons">
-              <FaHtml5 size={"30px"} />
-              <FaSass size={"30px"} />
-              <FaReact size={"30px"} />
-              <SiAdobephotoshop size={"30px"} />
-              <SiAdobeillustrator size={"30px"} />
+              <FaHtml5 size={"35px"} />
+              <FaSass size={"35px"} />
+              <FaReact size={"35px"} />
+              <SiAdobephotoshop size={"35px"} />
+              <SiAdobeillustrator size={"35px"} />
             </div>
           </div>
           <div className="introduce-inner qualifications">

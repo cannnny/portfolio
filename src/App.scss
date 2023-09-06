@@ -1,6 +1,6 @@
 @use "./mq.scss" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=Mulish&family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish&family=Bungee+Hairline&display=swap");
 
 * {
   color: #192f60;
@@ -9,7 +9,7 @@
 
 .main {
   position: relative;
-  .main-container {
+  .contents {
     @include mq() {
       width: 60%;
       padding: 20px 15px;
@@ -23,8 +23,9 @@
         margin-top: 50px;
         font-size: 60px;
       }
-      font-size: 50px;
-      font-family: "Yellowtail", cursive;
+      font-size: 40px;
+      font-family: "Bungee Hairline", cursive;
+      text-align: left;
     }
     h3 {
       @include mq() {
@@ -48,8 +49,9 @@
   justify-content: center;
   margin-top: 5px;
 }
-.skill-icons {
-  gap: 9px;
+
+.border {
+  border-top: 2px solid #192f60;
 }
 
 .return-top-button {

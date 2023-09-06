@@ -3,9 +3,9 @@ import { SiGithub } from "react-icons/si";
 
 const Contact = () => {
   return (
-    <div className="main-container contact">
+    <div className="contents contact">
       <h2>Contact</h2>
-      <div className="contact-inner">
+      <div className="contact-inner border">
         <div className="icons button contact-icons">
           <a href="https://twitter.com/canypuff" alt="">
             <FaTwitter size={"40px"} />
