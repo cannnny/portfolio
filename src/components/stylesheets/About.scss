@@ -1,16 +1,27 @@
 @use "../../mq.scss" as *;
 
+.about-inner {
+  @include mq() {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .portrait {
   @include mq() {
-    width: 200px;
-    height: 200px;
-    margin: 15px auto;
+    width: 300px;
+    height: 300px;
+    margin: 80px auto;
   }
   width: 30%;
-  margin: 0 auto;
+  margin: 30px auto;
   border-radius: 50%;
 }
 
 .introduce-inner {
   margin-top: 30px;
+}
+
+.skill-icons {
+  gap: 9px;
 }
