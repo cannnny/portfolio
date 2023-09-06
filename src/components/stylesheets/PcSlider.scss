@@ -1,12 +1,12 @@
-.works-pc {
+.swiper {
   display: flex;
-  padding-top: 20px;
+  padding-top: 40px;
 
   gap: 20px;
   a {
     display: block;
     flex-basis: 25%;
-    background-color: #000000;
+    background-color: #ffffff;
   }
   img {
     display: block;
@@ -14,5 +14,8 @@
       opacity: 0.8;
       transition: 0.2s;
     }
+  }
+  .swiper-thumb {
+    width: 70%;
   }
 }
