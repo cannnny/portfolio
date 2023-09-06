@@ -31,7 +31,7 @@ const swiperParams = {
 const Slider = (props) => {
   return (
     <>
-      <Swiper {...swiperParams} className="swiper">
+      <Swiper {...swiperParams} className="swiper border">
         {props.data.map((item, index) => {
           return (
             <SwiperSlide key={index}>
