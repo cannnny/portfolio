@@ -1,3 +1,5 @@
+$main-color: #192f60;
+
 .swiper {
   .swiper-button-next,
   .swiper-button-prev {
@@ -5,7 +7,7 @@
     top: 50%;
     transform: translateY(-50%);
 
-    --swiper-navigation-color: #192f60;
+    --swiper-navigation-color: $main-color;
     &::after {
       font-size: 30px !important;
     }
@@ -21,6 +23,6 @@
   }
 
   .swiper-pagination-bullet-active {
-    background-color: #192f60 !important;
+    background-color: $main-color !important;
   }
 }
