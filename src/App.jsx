@@ -4,7 +4,7 @@ import MainVisual from "./components/MainVisual";
 import About from "./components/About";
 import SpWorks from "./components/SpWorks";
 import PcWorks from "./components/PcWorks";
-// import Contact from "./components/Contact";
+import Contact from "./components/Contact";
 
 // icons
 import { IoIosArrowDropupCircle } from "react-icons/io";
@@ -56,20 +56,35 @@ function App() {
 
   const worksData = [
     {
+      name: "モンハン弱点教えてあげるくん",
       url: "https://mh-weak-info.vercel.app/",
       img: "thumb-mh.jpg",
+      overview:
+        "ゲーム「モンスターハンター」に登場するモンスターの弱点を教えてくれるWebアプリです。",
     },
     {
+      name: "Hello Pawmo!",
       url: "https://hello-pawmo.vercel.app/",
       img: "thumb-hp.jpg",
+      overview: "ポケモン「パモット」がメッセージに答えて挨拶してくれます。",
     },
     {
+      name: "らぶぱも",
       url: "https://love-pawmi.vercel.app/",
       img: "thumb-lp.jpg",
+      overview: "ポケモン「パモ」のぬいぐるみをひたすら眺めるWebアプリです。",
     },
     {
+      name: "Canipture!",
       url: "https://canipture.vercel.app/",
       img: "thumb-ca.jpg",
+      overview: "ゲームのスクリーンショットを掲載したギャラリーです。",
+    },
+    {
+      name: "きょう何食べる？",
+      url: "https://whats-for-dinner-cannnny.vercel.app/",
+      img: "thumb-wd.jpg",
+      overview: "気分に合わせて今日のご飯を提案してくれるWebアプリです。",
     },
   ];
 
@@ -80,11 +95,11 @@ function App() {
         <About />
         <div className="contents works">
           <h2>Works</h2>
-          <div className="works-inner">
+          <div className="works-inner border">
             {isPc ? <PcWorks data={worksData} /> : <SpWorks data={worksData} />}
           </div>
         </div>
-        {/* <Contact /> */}
+        <Contact />
         <div
           className={
             !isVisible
