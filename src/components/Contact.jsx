@@ -1,5 +1,5 @@
 import { FaTwitter } from "react-icons/fa";
-import { SiGithub } from "react-icons/si";
+import { SiGithub, SiWantedly } from "react-icons/si";
 
 const Contact = () => {
   return (
@@ -12,6 +12,9 @@ const Contact = () => {
           </a>
           <a href="https://github.com/cannnny" alt="">
             <SiGithub size={"40px"} />
+          </a>
+          <a href="https://www.wantedly.com/id/yumi_dotera" alt="">
+            <SiWantedly size={"40px"} />
           </a>
         </div>
       </div>
