@@ -1,8 +1,9 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "./stylesheets/SpWorks.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const swiperParams = {
   modules: [Autoplay, Pagination, Navigation],
@@ -27,10 +28,10 @@ const swiperParams = {
   },
 };
 
-const Slider = (props) => {
+const SpWorks = (props) => {
   return (
     <>
-      <Swiper {...swiperParams} className="swiper">
+      <Swiper {...swiperParams} className="swiper border">
         {props.data.map((item, index) => {
           return (
             <SwiperSlide key={index}>
@@ -48,4 +49,4 @@ const Slider = (props) => {
   );
 };
 
-export default Slider;
+export default SpWorks;

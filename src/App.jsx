@@ -1,32 +1,27 @@
 import "./reset.css";
 import "./App.scss";
-import Slider from "./components/Slider.jsx";
-import Works from "./components/works/Works.jsx";
+import MainVisual from "./components/MainVisual";
+import About from "./components/About";
+import SpWorks from "./components/SpWorks";
+import PcWorks from "./components/PcWorks";
+import Contact from "./components/Contact";
 
 // icons
 import { IoIosArrowDropupCircle } from "react-icons/io";
-import {
-  FaAngleDown,
-  FaHtml5,
-  FaSass,
-  FaReact,
-  FaTwitter,
-} from "react-icons/fa";
-import { SiAdobephotoshop, SiAdobeillustrator, SiGithub } from "react-icons/si";
 
 import { useState, useEffect } from "react";
 
 function App() {
   // PageTopボタン用
-  const [isVisible, setIsVisible] = useState(false);
+  const [buttonIsVisible, setButtonIsVisible] = useState(false);
 
-  const toggleVisibility = () => {
-    window.scrollY > 300 ? setIsVisible(true) : setIsVisible(false);
+  const buttonToggleVisibility = () => {
+    window.scrollY > 300 ? setButtonIsVisible(true) : setButtonIsVisible(false);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.addEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", buttonToggleVisibility);
+    return () => window.addEventListener("scroll", buttonToggleVisibility);
   }, []);
 
   const returnTop = () => {
@@ -37,15 +32,15 @@ function App() {
   };
 
   // worksスライダー用
-  const [isSwiperEnabled, setIsSwiperEnabled] = useState(true);
+  const [isPc, setisPc] = useState(true);
 
   const handleResize = () => {
     const breakpoint = 1024;
 
-    if (window.innerWidth < breakpoint) {
-      setIsSwiperEnabled(true);
+    if (window.innerWidth > breakpoint) {
+      setisPc(true);
     } else {
-      setIsSwiperEnabled(false);
+      setisPc(false);
     }
   };
 
@@ -61,91 +56,53 @@ function App() {
 
   const worksData = [
     {
+      name: "モンハン弱点教えてあげるくん",
       url: "https://mh-weak-info.vercel.app/",
       img: "thumb-mh.jpg",
+      overview:
+        "「モンスターハンター」に登場するモンスターの弱点を検索できるWebアプリです。",
     },
     {
+      name: "Hello Pawmo!",
       url: "https://hello-pawmo.vercel.app/",
       img: "thumb-hp.jpg",
+      overview: "「パモット」がメッセージに答えて挨拶してくれるWebアプリです。",
     },
     {
+      name: "らぶぱも",
       url: "https://love-pawmi.vercel.app/",
       img: "thumb-lp.jpg",
+      overview: "「パモ」のぬいぐるみをひたすら眺めるWebアプリです。",
     },
     {
+      name: "Canipture!",
       url: "https://canipture.vercel.app/",
       img: "thumb-ca.jpg",
+      overview: "ゲームのスクリーンショットを掲載したギャラリーです。",
+    },
+    {
+      name: "きょう何食べる？",
+      url: "https://whats-for-dinner-cannnny.vercel.app/",
+      img: "thumb-wd.jpg",
+      overview: "気分に合わせて今日のご飯を提案してくれるWebアプリです。",
     },
   ];
 
   return (
     <div className="App">
-      <div className="mv">
-        <div className="header-logo">
-          <h1>Cannnny!</h1>
-          <img src="./logo2.png" alt="" />
-        </div>
-        <div className="scroll">
-          <FaAngleDown className="scroll-icon" size={"40px"} />
-        </div>
-      </div>
+      <MainVisual />
       <div className="main">
-        {/* main-containerをコンポーネント化できるかも */}
-        <div className="main-container about">
-          <h2>About</h2>
-          <div className="about-inner">
-            <img className="portrait" src="./photo.jpg" alt="" />
-            <div className="introduce">
-              <div className="introduce-inner career">
-                <h3>堂寺ユミ（どうてらゆみ）</h3>
-                <p>2019年から4年ほど、練馬区役所で職員として勤務。</p>
-                <p>情報・人事部門の業務に従事してきました。</p>
-                <p>プログラミングは独学です。</p>
-              </div>
-              <div className="introduce-inner skills">
-                <h3>できること</h3>
-                <div className="icons skill-icons">
-                  <FaHtml5 size={"30px"} />
-                  <FaSass size={"30px"} />
-                  <FaReact size={"30px"} />
-                  <SiAdobephotoshop size={"30px"} />
-                  <SiAdobeillustrator size={"30px"} />
-                </div>
-              </div>
-              <div className="introduce-inner qualifications">
-                <h3>資格</h3>
-                <p>ITパスポート(2021)</p>
-                <p>情報セキュリティマネジメント試験(2022)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="main-container works">
+        <About />
+        <div className="contents works">
           <h2>Works</h2>
-          <div className="works-inner">
-            {isSwiperEnabled ? (
-              <Slider data={worksData} />
-            ) : (
-              <Works data={worksData} />
-            )}
+          <div className="works-inner border">
+            {isPc ? <PcWorks data={worksData} /> : <SpWorks data={worksData} />}
           </div>
         </div>
-        <div className="main-container contact">
-          <h2>Contact</h2>
-          <div className="contact-inner">
-            <div className="icons button contact-icons">
-              <a href="https://twitter.com/canypuff" alt="">
-                <FaTwitter size={"40px"} />
-              </a>
-              <a href="https://github.com/cannnny" alt="">
-                <SiGithub size={"40px"} />
-              </a>
-            </div>
-          </div>
-        </div>
+        <Contact />
         <div
           className={
-            !isVisible
+            !buttonIsVisible
               ? "button return-top-button"
               : "button return-top-button show"
           }

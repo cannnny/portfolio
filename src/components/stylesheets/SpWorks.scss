@@ -1,0 +1,28 @@
+$main-color: #192f60;
+
+.swiper {
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    --swiper-navigation-color: $main-color;
+    &::after {
+      font-size: 30px !important;
+    }
+  }
+  .swiper-slide img {
+    display: block;
+    margin: 5px auto;
+  }
+
+  .swiper-pagination {
+    position: initial !important;
+    margin-top: 20px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $main-color !important;
+  }
+}
