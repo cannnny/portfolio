@@ -13,15 +13,15 @@ import { useState, useEffect } from "react";
 
 function App() {
   // PageTopボタン用
-  const [isVisible, setIsVisible] = useState(false);
+  const [buttonIsVisible, setButtonIsVisible] = useState(false);
 
-  const toggleVisibility = () => {
-    window.scrollY > 300 ? setIsVisible(true) : setIsVisible(false);
+  const buttonToggleVisibility = () => {
+    window.scrollY > 300 ? setButtonIsVisible(true) : setButtonIsVisible(false);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.addEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", buttonToggleVisibility);
+    return () => window.addEventListener("scroll", buttonToggleVisibility);
   }, []);
 
   const returnTop = () => {
@@ -60,19 +60,19 @@ function App() {
       url: "https://mh-weak-info.vercel.app/",
       img: "thumb-mh.jpg",
       overview:
-        "ゲーム「モンスターハンター」に登場するモンスターの弱点を教えてくれるWebアプリです。",
+        "「モンスターハンター」に登場するモンスターの弱点を検索できるWebアプリです。",
     },
     {
       name: "Hello Pawmo!",
       url: "https://hello-pawmo.vercel.app/",
       img: "thumb-hp.jpg",
-      overview: "ポケモン「パモット」がメッセージに答えて挨拶してくれます。",
+      overview: "「パモット」がメッセージに答えて挨拶してくれるWebアプリです。",
     },
     {
       name: "らぶぱも",
       url: "https://love-pawmi.vercel.app/",
       img: "thumb-lp.jpg",
-      overview: "ポケモン「パモ」のぬいぐるみをひたすら眺めるWebアプリです。",
+      overview: "「パモ」のぬいぐるみをひたすら眺めるWebアプリです。",
     },
     {
       name: "Canipture!",
@@ -102,7 +102,7 @@ function App() {
         <Contact />
         <div
           className={
-            !isVisible
+            !buttonIsVisible
               ? "button return-top-button"
               : "button return-top-button show"
           }
