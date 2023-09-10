@@ -12,6 +12,29 @@ import { IoIosArrowDropupCircle } from "react-icons/io";
 import { useState, useEffect } from "react";
 
 function App() {
+  const contents = document.querySelectorAll(".contents");
+  const contentsArray = Array.prototype.slice.call(contents, 0);
+
+  const options = {
+    root: null,
+    rootMargin: "0px 0px -150px",
+    threshold: 0,
+  };
+
+  const doWhenIntersect = (entries) => {
+    const entriesArray = Array.prototype.slice.call(entries, 0);
+    entriesArray.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(doWhenIntersect, options);
+  contentsArray.forEach((content) => {
+    observer.observe(content);
+  });
+
   // PageTopボタン用
   const [buttonIsVisible, setButtonIsVisible] = useState(false);
 
@@ -92,7 +115,9 @@ function App() {
     <div className="App">
       <MainVisual />
       <div className="main">
-        <About />
+        <div className="contents about">
+          <About />
+        </div>
         <div className="contents works">
           <h2>Works</h2>
           <div className="works-inner border">

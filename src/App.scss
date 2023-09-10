@@ -15,10 +15,17 @@ $main-color: #192f60;
       width: 60%;
       padding: 20px 15px;
     }
+    opacity: 0;
+    transform: translateY(50px);
     width: 100%;
     margin: 0 auto;
     padding: 40px 15px;
     text-align: center;
+    transition: opacity 1s, transform 0.8s;
+    &.show {
+      opacity: 1;
+      transform: translateY(0px);
+    }
     h2 {
       @include mq() {
         margin-top: 50px;
@@ -30,7 +37,6 @@ $main-color: #192f60;
     }
     h3 {
       @include mq() {
-        // margin-top: 40px;
         font-size: 20px;
       }
     }
