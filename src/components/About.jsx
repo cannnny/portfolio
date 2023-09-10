@@ -5,7 +5,7 @@ import { SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
 
 const About = () => {
   return (
-    <div className="contents about">
+    <>
       <h2>About</h2>
       <div className="about-inner border">
         <img className="portrait" src="./photo.jpg" alt="" />
@@ -33,7 +33,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

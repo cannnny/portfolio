@@ -2,20 +2,39 @@ import { FaTwitter } from "react-icons/fa";
 import { SiGithub, SiWantedly } from "react-icons/si";
 
 const Contact = () => {
+  const iconSize = "40px";
+
+  const contacts = [
+    {
+      service: "twitter",
+      icon: <FaTwitter size={iconSize} />,
+      url: "https://twitter.com/canypuff",
+    },
+    {
+      service: "github",
+      icon: <SiGithub size={iconSize} />,
+      url: "https://github.com/cannnny",
+    },
+    {
+      service: "wantedly",
+      icon: <SiWantedly size={iconSize} />,
+      url: "https://www.wantedly.com/id/yumi_dotera",
+    },
+  ];
+
   return (
     <div className="contents contact">
       <h2>Contact</h2>
       <div className="contact-inner border">
-        <div className="icons button contact-icons">
-          <a href="https://twitter.com/canypuff" alt="">
-            <FaTwitter size={"40px"} />
-          </a>
-          <a href="https://github.com/cannnny" alt="">
-            <SiGithub size={"40px"} />
-          </a>
-          <a href="https://www.wantedly.com/id/yumi_dotera" alt="">
-            <SiWantedly size={"40px"} />
-          </a>
+        <div className="button contact-icons">
+          {contacts.map((item) => {
+            return (
+              <a href={item.url} alt="" key={item.service}>
+                <div className="contact-icon">{item.icon}</div>
+                <p>{item.url}</p>
+              </a>
+            );
+          })}
         </div>
       </div>
     </div>
