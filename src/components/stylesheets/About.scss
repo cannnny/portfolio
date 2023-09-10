@@ -8,14 +8,13 @@
 }
 
 .portrait {
-  @include mq() {
-    width: 300px;
-    height: 300px;
-    margin: 80px auto;
-  }
   width: 30%;
   margin: 30px auto;
   border-radius: 50%;
+}
+
+.introduce {
+  margin-top: 40px;
 }
 
 .introduce-inner + .introduce-inner {
