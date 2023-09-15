@@ -6,7 +6,7 @@ const MainVisual = () => {
     <div className="main-visual">
       <div className="logo">
         <h1>Cannnny!</h1>
-        <img src="./logo2.png" alt="" />
+        <img src="./logo.webp" alt="" />
       </div>
       <div className="scroll">
         <FaAngleDown className="scroll-icon" size={"40px"} />
