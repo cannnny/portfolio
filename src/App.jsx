@@ -81,32 +81,32 @@ function App() {
     {
       name: "モンハン弱点教えてあげるくん",
       url: "https://mh-weak-info.vercel.app/",
-      img: "thumb-mh.jpg",
+      img: "thumb-mh.webp",
       overview:
         "「モンスターハンター」に登場するモンスターの弱点を検索できるWebアプリです。",
     },
     {
       name: "Hello Pawmo!",
       url: "https://hello-pawmo.vercel.app/",
-      img: "thumb-hp.jpg",
+      img: "thumb-hp.webp",
       overview: "「パモット」がメッセージに答えて挨拶してくれるWebアプリです。",
     },
     {
       name: "らぶぱも",
       url: "https://love-pawmi.vercel.app/",
-      img: "thumb-lp.jpg",
+      img: "thumb-lp.webp",
       overview: "「パモ」のぬいぐるみをひたすら眺めるWebアプリです。",
     },
     {
       name: "Canipture!",
       url: "https://canipture.vercel.app/",
-      img: "thumb-ca.jpg",
+      img: "thumb-ca.webp",
       overview: "ゲームのスクリーンショットを掲載したギャラリーです。",
     },
     {
       name: "きょう何食べる？",
       url: "https://whats-for-dinner-cannnny.vercel.app/",
-      img: "thumb-wd.jpg",
+      img: "thumb-wd.webp",
       overview: "気分に合わせて今日のご飯を提案してくれるWebアプリです。",
     },
   ];
