@@ -1,10 +1,10 @@
+@use "./components/stylesheets/variables";
 @use "./mq.scss" as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Mulish&family=Bungee+Hairline&display=swap");
-$main-color: #192f60;
 
 * {
-  color: $main-color;
+  color: variables.$main-color;
   font-family: "Mulish", sans-serif;
 }
 
@@ -58,7 +58,7 @@ $main-color: #192f60;
 }
 
 .border {
-  border-top: 2px solid $main-color;
+  border-top: 2px solid variables.$main-color;
 }
 
 .return-top-button {
@@ -129,7 +129,7 @@ footer {
   align-items: center;
   height: 40px;
   margin-top: 60px;
-  background-color: $main-color;
+  background-color: variables.$main-color;
   p {
     @include mq() {
       font-size: 15px;

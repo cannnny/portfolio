@@ -1,4 +1,4 @@
-$main-color: #192f60;
+@use "variables";
 
 .swiper {
   .swiper-button-next,
@@ -7,7 +7,7 @@ $main-color: #192f60;
     top: 50%;
     transform: translateY(-50%);
 
-    --swiper-navigation-color: $main-color;
+    --swiper-navigation-color: variables.$main-color;
     &::after {
       font-size: 30px !important;
     }
@@ -23,6 +23,6 @@ $main-color: #192f60;
   }
 
   .swiper-pagination-bullet-active {
-    background-color: $main-color !important;
+    background-color: variables.$main-color !important;
   }
 }
