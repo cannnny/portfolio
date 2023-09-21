@@ -8,7 +8,7 @@ const About = () => {
     <>
       <h2>About</h2>
       <div className="about-inner border">
-        <img className="portrait" src="./photo.jpg" alt="" />
+        <img className="portrait" src="./photo.webp" alt="" />
         <div className="introduce">
           <div className="introduce-inner career">
             <h3>堂寺ユミ（どうてらゆみ）</h3>
