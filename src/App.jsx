@@ -1,17 +1,22 @@
+// css
 import "./reset.css";
 import "./App.scss";
+
+// コンポーネント
 import MainVisual from "./components/MainVisual";
 import About from "./components/About";
 import SpWorks from "./components/SpWorks";
 import PcWorks from "./components/PcWorks";
 import Contact from "./components/Contact";
 
-// icons
+// アイコン
 import { IoIosArrowDropupCircle } from "react-icons/io";
 
+// フック
 import { useState, useEffect } from "react";
 
 function App() {
+  // スクロールに応じて各コンテンツを下からフェードイン
   const contents = document.querySelectorAll(".contents");
   const contentsArray = Array.prototype.slice.call(contents, 0);
 
@@ -35,7 +40,7 @@ function App() {
     observer.observe(content);
   });
 
-  // PageTopボタン用
+  // スクロールに応じて上に戻るボタンを表示
   const [buttonIsVisible, setButtonIsVisible] = useState(false);
 
   const buttonToggleVisibility = () => {
@@ -54,7 +59,7 @@ function App() {
     });
   };
 
-  // worksスライダー用
+  // 画面サイズが1024以下ならworksをスライダーで表示
   const [isPc, setisPc] = useState(true);
 
   const handleResize = () => {
@@ -69,7 +74,6 @@ function App() {
 
   useEffect(() => {
     handleResize();
-
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -77,6 +81,7 @@ function App() {
     };
   }, []);
 
+  // 掲載している制作物一覧
   const worksData = [
     {
       name: "モンハン弱点教えてあげるくん",
