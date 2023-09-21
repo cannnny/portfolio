@@ -10,11 +10,8 @@
 
 .main {
   position: relative;
+
   .contents {
-    @include mq() {
-      width: 60%;
-      padding: 20px 15px;
-    }
     opacity: 0;
     transform: translateY(50px);
     width: 100%;
@@ -22,18 +19,21 @@
     padding: 40px 15px;
     text-align: center;
     transition: opacity 1s, transform 0.8s;
+    @include mq() {
+      width: 60%;
+      padding: 20px 15px;
+    }
     &.show {
       opacity: 1;
       transform: translateY(0px);
     }
     h2 {
-      @include mq() {
-        // margin-top: 50px;
-        font-size: 60px;
-      }
       font-size: 40px;
       font-family: "Bungee Hairline", cursive;
       text-align: left;
+      @include mq() {
+        font-size: 60px;
+      }
     }
     h3 {
       @include mq() {
@@ -41,12 +41,12 @@
       }
     }
     p {
+      margin-top: 3px;
+      font-size: 15px;
       @include mq() {
         margin-top: 6px;
         font-size: 18px;
       }
-      margin-top: 3px;
-      font-size: 15px;
     }
   }
 }
