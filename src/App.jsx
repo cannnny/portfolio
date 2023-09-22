@@ -102,18 +102,18 @@ function App() {
       img: "thumb-lp.webp",
       overview: "「パモ」のぬいぐるみをひたすら眺めるWebアプリです。",
     },
-    {
-      name: "Canipture!",
-      url: "https://canipture.vercel.app/",
-      img: "thumb-ca.webp",
-      overview: "ゲームのスクリーンショットを掲載したギャラリーです。",
-    },
-    {
-      name: "きょう何食べる？",
-      url: "https://whats-for-dinner-cannnny.vercel.app/",
-      img: "thumb-wd.webp",
-      overview: "気分に合わせて今日のご飯を提案してくれるWebアプリです。",
-    },
+    // {
+    //   name: "Canipture!",
+    //   url: "https://canipture.vercel.app/",
+    //   img: "thumb-ca.webp",
+    //   overview: "ゲームのスクリーンショットを掲載したギャラリーです。",
+    // },
+    // {
+    //   name: "きょう何食べる？",
+    //   url: "https://whats-for-dinner-cannnny.vercel.app/",
+    //   img: "thumb-wd.webp",
+    //   overview: "気分に合わせて今日のご飯を提案してくれるWebアプリです。",
+    // },
   ];
 
   return (
