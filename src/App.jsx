@@ -110,7 +110,7 @@ function App() {
     },
     {
       name: "きょう何食べる？",
-      url: "https://whats-for-dinner-cannnny.vercel.app/",
+      url: "https://whats-for-dinner-git-main-cannnny.vercel.app/",
       img: "thumb-wd.webp",
       overview: "気分に合わせて今日のご飯を提案してくれるWebアプリです。",
     },
