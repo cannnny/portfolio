@@ -4,45 +4,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish&family=Bungee+Hairline&display=swap");
 
 * {
-  color: variables.$main-color;
   font-family: "Mulish", sans-serif;
+  color: variables.$main-color;
 }
 
 .main {
   position: relative;
 
   .contents {
-    opacity: 0;
-    transform: translateY(50px);
     width: 100%;
-    margin: 30px auto;
     padding: 40px 15px;
+    margin: 30px auto;
     text-align: center;
+    opacity: 0;
     transition: opacity 1s, transform 0.8s;
+    transform: translateY(50px);
+
     @include mq() {
       width: 60%;
       padding: 20px 15px;
     }
+
     &.show {
       opacity: 1;
-      transform: translateY(0px);
+      transform: translateY(0);
     }
+
     h2 {
-      font-size: 40px;
       font-family: "Bungee Hairline", cursive;
+      font-size: 40px;
       text-align: left;
+
       @include mq() {
         font-size: 60px;
       }
     }
+
     h3 {
       @include mq() {
         font-size: 20px;
       }
     }
+
     p {
       margin-top: 3px;
       font-size: 15px;
+
       @include mq() {
         margin-top: 6px;
         font-size: 18px;
@@ -67,9 +74,10 @@
   bottom: 10%;
   cursor: pointer;
   animation: move-to-right 0.5s forwards;
+
   &.show {
-    opacity: 1;
     z-index: 10;
+    opacity: 1;
     animation: move-to-left 0.5s forwards;
   }
 }
@@ -79,6 +87,7 @@
     opacity: 0;
     transform: translateX(100px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -90,6 +99,7 @@
     opacity: 1;
     transform: translateX(0);
   }
+
   to {
     opacity: 0;
     transform: translateX(100px);
@@ -99,15 +109,18 @@
 .contact-icons {
   display: inline-block;
   text-align: center;
+
   a {
     display: flex;
     margin-top: 25px;
     text-decoration: none;
+
     &:hover {
       opacity: 0.6;
       transition: 0.2s;
     }
   }
+
   .contact-icon {
     margin-right: 30px;
   }
@@ -124,17 +137,20 @@ footer {
   @include mq() {
     height: 50px;
   }
+
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 40px;
   margin-top: 60px;
   background-color: variables.$main-color;
+
   p {
     @include mq() {
       font-size: 15px;
     }
-    color: #ffffff;
+
     font-size: 12px;
+    color: #ffffff;
   }
 }
