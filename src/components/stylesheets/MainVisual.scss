@@ -15,6 +15,7 @@
   .logo {
     @include mq() {
       max-width: 600px;
+      margin-left: 30px;
     }
 
     position: absolute;
