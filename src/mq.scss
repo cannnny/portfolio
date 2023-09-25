@@ -4,6 +4,7 @@ $breakpoint: (
   "md": "screen and (min-width: 740px)",
   "lg": "screen and (min-width: 1024px)"
 ) !default;
+
 @mixin mq($defaultSize: lg) {
   @media #{map-get($breakpoint, $defaultSize)} {
     @content;

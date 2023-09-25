@@ -4,6 +4,7 @@ import { SiGithub, SiWantedly } from "react-icons/si";
 const Contact = () => {
   const iconSize = "40px";
 
+  // 連絡先一覧
   const contacts = [
     {
       service: "twitter",

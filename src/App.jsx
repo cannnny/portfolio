@@ -26,6 +26,7 @@ function App() {
     threshold: 0,
   };
 
+  // 監視対象が一定の場所に到達したらshowクラスを付与
   const doWhenIntersect = (entries) => {
     const entriesArray = Array.prototype.slice.call(entries, 0);
     entriesArray.forEach((entry) => {
@@ -35,14 +36,14 @@ function App() {
     });
   };
 
+  // 監視対象を設定
   const observer = new IntersectionObserver(doWhenIntersect, options);
   contentsArray.forEach((content) => {
     observer.observe(content);
   });
 
-  // スクロールに応じて上に戻るボタンを表示
+  // スクロール量が300以上なら上に戻るボタンを表示
   const [buttonIsVisible, setButtonIsVisible] = useState(false);
-
   const buttonToggleVisibility = () => {
     window.scrollY > 300 ? setButtonIsVisible(true) : setButtonIsVisible(false);
   };
@@ -52,6 +53,7 @@ function App() {
     return () => window.addEventListener("scroll", buttonToggleVisibility);
   }, []);
 
+  // 上に戻る動き
   const returnTop = () => {
     window.scrollTo({
       top: 0,
@@ -59,7 +61,7 @@ function App() {
     });
   };
 
-  // 画面サイズが1024以下ならworksをスライダーで表示
+  // 画面サイズが1024px以下ならworksをスライダーで表示
   const [isPc, setisPc] = useState(true);
 
   const handleResize = () => {
@@ -126,10 +128,12 @@ function App() {
         <div className="contents works">
           <h2>Works</h2>
           <div className="works-inner border">
+            {/* 画面サイズがPCかどうかでカードとスライダーを切り替え */}
             {isPc ? <PcWorks data={worksData} /> : <SpWorks data={worksData} />}
           </div>
         </div>
         <Contact />
+        {/* スクロール量が一定以上に到達したら上に戻るボタンを表示 */}
         <div
           className={
             !buttonIsVisible
