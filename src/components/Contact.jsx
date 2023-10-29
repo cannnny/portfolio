@@ -1,4 +1,3 @@
-import { FaTwitter } from "react-icons/fa";
 import { SiGithub, SiWantedly } from "react-icons/si";
 
 const Contact = () => {
@@ -6,11 +5,6 @@ const Contact = () => {
 
   // 連絡先一覧
   const contacts = [
-    {
-      service: "twitter",
-      icon: <FaTwitter size={iconSize} />,
-      url: "https://twitter.com/canypuff",
-    },
     {
       service: "github",
       icon: <SiGithub size={iconSize} />,
