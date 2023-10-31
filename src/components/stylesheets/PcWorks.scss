@@ -1,3 +1,5 @@
+@use "./variables";
+
 .pc-works {
   display: flex;
   flex-wrap: wrap;
@@ -29,16 +31,30 @@
     }
 
     .item-title {
-      flex-grow: 1;
+      flex-wrap: wrap;
       padding: 0 25px;
       margin-top: 20px;
       font-weight: bold;
     }
 
     .item-overview {
-      flex-grow: 1;
+      flex-basis: 72px;
       padding: 0 25px;
       margin-top: 25px;
+    }
+
+    .item-tags {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 15px 20px;
+
+      .tag {
+        padding: 3px 15px;
+        margin: 5px;
+        color: #ffffff;
+        background-color: variables.$main-color;
+        border-radius: 15px;
+      }
     }
   }
 }

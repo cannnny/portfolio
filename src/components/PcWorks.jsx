@@ -1,18 +1,27 @@
 import "./stylesheets/PcWorks.scss";
 
-const PcWorks = (props) => {
+const PcWorks = ({ data }) => {
   return (
     <>
       <div className="pc-works">
-        {props.data.map((item, index) => {
+        {data.map((item, index) => {
           return (
             <div className="works-item" key={index}>
               <a href={item.url}>
-                <p className="item-img">
+                <div className="item-img">
                   <img src={item.img} alt="" />
-                </p>
-                <p className="item-title">{item.name}</p>
-                <p className="item-overview">{item.overview}</p>
+                </div>
+                <div className="item-title">{item.name}</div>
+                <div className="item-overview">{item.overview}</div>
+                <div className="item-tags">
+                  {item.tag.map((element, id) => {
+                    return (
+                      <div className="tag" key={id}>
+                        {element}
+                      </div>
+                    );
+                  })}
+                </div>
               </a>
             </div>
           );

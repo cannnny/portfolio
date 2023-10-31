@@ -86,9 +86,10 @@ function App() {
   // 掲載している制作物一覧
   const worksData = [
     {
-      name: "モンハン弱点教えてあげるくん",
+      name: "モンハン弱点教えるくん",
       url: "https://mh-weak-info.vercel.app/",
       img: "thumb-mh.webp",
+      tag: ["React", "microCMS"],
       overview:
         "「モンスターハンター」に登場するモンスターの弱点を検索できるWebアプリです。",
     },
@@ -96,24 +97,28 @@ function App() {
       name: "Hello Pawmo!",
       url: "https://hello-pawmo.vercel.app/",
       img: "thumb-hp.webp",
+      tag: ["React"],
       overview: "「パモット」がメッセージに答えて挨拶してくれるWebアプリです。",
     },
     {
       name: "らぶぱも",
       url: "https://love-pawmi.vercel.app/",
       img: "thumb-lp.webp",
+      tag: ["React", "Photoshop"],
       overview: "「パモ」のぬいぐるみをひたすら眺めるWebアプリです。",
     },
     {
       name: "Canipture!",
       url: "https://canipture.vercel.app/",
       img: "thumb-ca.webp",
+      tag: ["React", "microCMS", "Swiper", "Illustrator"],
       overview: "ゲームのスクリーンショットを掲載したギャラリーです。",
     },
     {
       name: "きょう何食べる？",
-      url: "https://whats-for-dinner-git-main-cannnny.vercel.app/",
+      url: "whats-for-dinner-etjbd6z2s-cannnny.vercel.app",
       img: "thumb-wd.webp",
+      tag: ["React", "microCMS", "Framer Motion", "Jotai", "Illustrator"],
       overview: "気分に合わせて今日のご飯を提案してくれるWebアプリです。",
     },
   ];
