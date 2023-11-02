@@ -1,7 +1,30 @@
 import "./stylesheets/About.scss";
 
-import { FaHtml5, FaSass, FaReact } from "react-icons/fa";
+import { FaStar, FaHtml5, FaSass, FaReact } from "react-icons/fa";
 import { SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
+
+const ranks = [
+  <FaStar />,
+  <>
+    <FaStar />
+    <FaStar />
+  </>,
+  <>
+    <FaStar />
+    <FaStar />
+    <FaStar />
+  </>,
+];
+
+const skillList = [
+  { name: "HTML&CSS", rank: ranks[1] },
+  { name: "JavaScript", rank: ranks[1] },
+  { name: "React", rank: ranks[2] },
+  { name: "Git", rank: ranks[1] },
+  { name: "Photoshop", rank: ranks[0] },
+  { name: "Illustrator", rank: ranks[2] },
+  { name: "Sketch", rank: ranks[0] },
+];
 
 const About = () => {
   return (
@@ -18,12 +41,22 @@ const About = () => {
           </div>
           <div className="introduce-inner skills">
             <h3>できること</h3>
-            <div className="icons skill-icons">
+            <div className="skill-list">
+              {skillList.map((item, id) => {
+                return (
+                  <div key={id} className="skill">
+                    <div className="skill-name">{item.name}</div>
+                    <div className="skill-rank">{item.rank}</div>
+                  </div>
+                );
+              })}
+              {/* <div className="icons skill-icons">
               <FaHtml5 size={"35px"} />
               <FaSass size={"35px"} />
               <FaReact size={"35px"} />
               <SiAdobephotoshop size={"35px"} />
               <SiAdobeillustrator size={"35px"} />
+            </div> */}
             </div>
           </div>
           <div className="introduce-inner qualifications">

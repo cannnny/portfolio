@@ -24,3 +24,29 @@
 .skill-icons {
   gap: 9px;
 }
+
+.skill-list {
+  font-size: 15px;
+
+  @include mq() {
+    margin-top: 6px;
+    font-size: 18px;
+  }
+
+  .skill {
+    display: flex;
+    align-items: center;
+
+    .skill-rank {
+      display: flex;
+    }
+  }
+}
+
+.works-inner {
+  h3 {
+    margin-top: 15px;
+    font-family: "Bungee Hairline", cursive;
+    text-align: left;
+  }
+}

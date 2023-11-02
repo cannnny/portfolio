@@ -11,6 +11,7 @@ const PcWorks = ({ data }) => {
                 <div className="item-img">
                   <img src={item.img} alt="" />
                 </div>
+                <div className="item-category">{item.category}</div>
                 <div className="item-title">{item.name}</div>
                 <div className="item-overview">{item.overview}</div>
                 <div className="item-tags">
