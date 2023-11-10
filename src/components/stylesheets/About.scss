@@ -21,6 +21,42 @@
   margin-top: 30px;
 }
 
-.skill-icons {
-  gap: 9px;
+// .skill-icons {
+//   gap: 9px;
+// }
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-list {
+  font-size: 15px;
+
+  @include mq() {
+    margin-top: 6px;
+    font-size: 18px;
+  }
+
+  .skill {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 30px;
+
+    .skill-rank {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 30px;
+    }
+  }
+}
+
+.works-inner {
+  h3 {
+    margin-top: 15px;
+    font-family: "Bungee Hairline", cursive;
+    text-align: left;
+  }
 }
