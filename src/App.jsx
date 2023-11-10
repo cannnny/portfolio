@@ -128,7 +128,7 @@ function App() {
     },
     {
       name: "きょう何食べる？",
-      url: "https://whats-for-dinner-etjbd6z2s-cannnny.vercel.app",
+      url: "https://whats-for-dinner-etjbd6z2s-cannnny.vercel.app/",
       img: "thumb-wd.webp",
       category: "開発",
       tag: ["React", "microCMS", "Framer Motion", "Jotai", "Illustrator"],
