@@ -1,7 +1,6 @@
 import "./stylesheets/About.scss";
 
-import { FaStar, FaHtml5, FaSass, FaReact } from "react-icons/fa";
-import { SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
+import { FaStar } from "react-icons/fa";
 
 const ranks = [
   <FaStar />,
@@ -50,13 +49,6 @@ const About = () => {
                   </div>
                 );
               })}
-              {/* <div className="icons skill-icons">
-              <FaHtml5 size={"35px"} />
-              <FaSass size={"35px"} />
-              <FaReact size={"35px"} />
-              <SiAdobephotoshop size={"35px"} />
-              <SiAdobeillustrator size={"35px"} />
-            </div> */}
             </div>
           </div>
           <div className="introduce-inner qualifications">

@@ -21,8 +21,14 @@
   margin-top: 30px;
 }
 
-.skill-icons {
-  gap: 9px;
+// .skill-icons {
+//   gap: 9px;
+// }
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .skill-list {
@@ -34,11 +40,15 @@
   }
 
   .skill {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
+    height: 30px;
 
     .skill-rank {
       display: flex;
+      justify-content: flex-start;
+      margin-left: 30px;
     }
   }
 }
