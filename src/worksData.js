@@ -49,11 +49,11 @@ export const worksData = [
     overview: "気分に合わせて今日のご飯を提案してくれるWebアプリです。",
   },
   {
-    name: "【制作中】ランディングページ",
+    name: "【制作中】コーポレートサイト",
     url: "https://rp-bakery.vercel.app/",
     img: "thumb-rp.webp",
     category: "模写",
     tag: ["HTML&CSS", "JavaScript", "Photoshop", "Illustrator"],
-    overview: "架空のパン屋のWebサイトとして制作した模写サイトです。",
+    overview: "架空のパン屋のWebサイトとして制作しました。",
   },
 ];
