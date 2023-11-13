@@ -37,13 +37,14 @@ const About = () => {
             <p>2019年から4年ほど、練馬区役所で職員として勤務。</p>
             <p>情報・人事部門の業務に従事してきました。</p>
             <p>プログラミングは独学です。</p>
+            <p>主にReactやmicroCMSを使用したWebアプリを制作しています。</p>
           </div>
           <div className="introduce-inner skills">
             <h3>できること</h3>
             <div className="skill-list">
               {skillList.map((item, id) => {
                 return (
-                  <div key={id} className="skill">
+                  <div key={id} className="skill-item">
                     <div className="skill-name">{item.name}</div>
                     <div className="skill-rank">{item.rank}</div>
                   </div>

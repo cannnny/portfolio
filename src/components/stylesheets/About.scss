@@ -39,11 +39,11 @@
     font-size: 18px;
   }
 
-  .skill {
+  .skill-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    height: 30px;
+    height: 28px;
 
     .skill-rank {
       display: flex;
