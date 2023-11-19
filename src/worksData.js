@@ -56,4 +56,12 @@ export const worksData = [
     tag: ["HTML&CSS", "JavaScript", "Photoshop", "Illustrator"],
     overview: "架空のパン屋のWebサイトとして制作しました。",
   },
+  {
+    name: "【製作中】商品紹介ページ",
+    url: "#",
+    img: "",
+    category: "模写",
+    tag: ["HTML&CSS", "JavaScript", "Photoshop", "Illustrator"],
+    overview: "架空の清涼飲料水を紹介するWebサイトです。",
+  },
 ];
