@@ -53,7 +53,15 @@ export const worksData = [
     url: "https://rp-bakery.vercel.app/",
     img: "thumb-rp.webp",
     category: "模写",
-    tag: ["HTML&CSS", "JavaScript", "Photoshop", "Illustrator"],
+    tag: ["HTML&CSS", "JavaScript", "Swiper", "Photoshop", "Illustrator"],
     overview: "架空のパン屋のWebサイトとして制作しました。",
+  },
+  {
+    name: "商品紹介サイト",
+    url: "https://rp-drink.vercel.app/",
+    img: "thumb-rp2.webp",
+    category: "模写",
+    tag: ["HTML&CSS", "JavaScript", "Swiper", "Photoshop", "Illustrator"],
+    overview: "架空の清涼飲料水を紹介するWebサイトです。",
   },
 ];
