@@ -30,14 +30,24 @@ const About = () => {
     <>
       <h2>About</h2>
       <div className="about-inner border">
-        <img className="portrait" src="./photo.webp" alt="" />
+        <div className="portrait">
+          <img src="./photo.webp" alt="" />
+        </div>
         <div className="introduce">
           <div className="introduce-inner career">
             <h3>堂寺ユミ（どうてらゆみ）</h3>
-            <p>2019年から4年ほど、練馬区役所で職員として勤務。</p>
-            <p>情報・人事部門の業務に従事してきました。</p>
+            <p>東京都在住、1996年生まれの27歳です。</p>
+            <p>
+              2019年から4年ほど、練馬区役所で職員として勤務し、
+              <br />
+              情報・人事部門の業務に従事しました。
+            </p>
             <p>プログラミングは独学です。</p>
-            <p>主にReactやmicroCMSを使用したWebアプリを制作しています。</p>
+            <p>
+              Reactを使用したWebアプリを中心に
+              <wbr />
+              制作しています。
+            </p>
           </div>
           <div className="introduce-inner skills">
             <h3>できること</h3>

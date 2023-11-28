@@ -41,18 +41,20 @@
     }
 
     h3 {
+      margin-bottom: 10px;
+
       @include mq() {
         font-size: 20px;
       }
     }
 
     p {
-      margin-top: 3px;
       font-size: 15px;
+      line-height: 30px;
 
       @include mq() {
-        margin-top: 6px;
         font-size: 18px;
+        line-height: 35px;
       }
     }
   }
@@ -110,9 +112,13 @@
   display: inline-block;
   text-align: center;
 
-  a {
+  .flex-container {
     display: flex;
+    align-items: center;
     margin-top: 25px;
+  }
+
+  a {
     text-decoration: none;
 
     &:hover {

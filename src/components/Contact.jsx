@@ -25,8 +25,10 @@ const Contact = () => {
           {contacts.map((item) => {
             return (
               <a href={item.url} alt="" key={item.service}>
-                <div className="contact-icon">{item.icon}</div>
-                <p>{item.url}</p>
+                <div className="flex-container">
+                  <div className="contact-icon">{item.icon}</div>
+                  <p>{item.url}</p>
+                </div>
               </a>
             );
           })}

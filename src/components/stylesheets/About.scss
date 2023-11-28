@@ -1,29 +1,40 @@
 @use "../../mq.scss" as *;
 
 .about-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @include mq() {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 
 .portrait {
-  width: 28%;
-  margin: 30px auto;
-  border-radius: 50%;
+  width: 150px;
+  margin-top: 40px;
+
+  @include mq() {
+    width: 200px;
+  }
+
+  img {
+    border-radius: 50%;
+  }
 }
 
 .introduce {
   margin-top: 40px;
 }
 
+.introduce-inner {
+  word-break: keep-all;
+}
+
 .introduce-inner + .introduce-inner {
   margin-top: 30px;
 }
-
-// .skill-icons {
-//   gap: 9px;
-// }
 
 .skills {
   display: flex;
