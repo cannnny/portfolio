@@ -1,4 +1,4 @@
-@use "../../mq.scss" as *;
+@use "../../mq" as *;
 
 .about-inner {
   display: flex;
@@ -26,40 +26,40 @@
 
 .introduce {
   margin-top: 40px;
-}
 
-.introduce-inner {
-  word-break: keep-all;
-}
+  .introduce-inner {
+    word-break: keep-all;
 
-.introduce-inner + .introduce-inner {
-  margin-top: 30px;
+    & + .introduce-inner {
+      margin-top: 30px;
+    }
+  }
 }
 
 .skills {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.skill-list {
-  font-size: 15px;
+  .skill-list {
+    font-size: 15px;
 
-  @include mq() {
-    margin-top: 6px;
-    font-size: 18px;
-  }
+    @include mq() {
+      margin-top: 6px;
+      font-size: 18px;
+    }
 
-  .skill-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    height: 28px;
+    .skill-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      height: 28px;
 
-    .skill-rank {
-      display: flex;
-      justify-content: flex-start;
-      margin-left: 30px;
+      .skill-rank {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 30px;
+      }
     }
   }
 }

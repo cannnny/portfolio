@@ -1,0 +1,23 @@
+.contact-icons {
+  display: inline-block;
+  text-align: center;
+
+  .flex-container {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.6;
+      transition: 0.2s;
+    }
+  }
+
+  .contact-icon {
+    margin-right: 30px;
+  }
+}
