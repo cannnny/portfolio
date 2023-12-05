@@ -22,7 +22,6 @@ function App() {
   // スクロールに応じて各コンテンツを下からフェードイン
   const contents = document.querySelectorAll(".contents");
   const contentsArray = Array.prototype.slice.call(contents, 0);
-
   const options = {
     root: null,
     rootMargin: "0px 0px -150px",
@@ -45,7 +44,7 @@ function App() {
     observer.observe(content);
   });
 
-  // スクロール量が300以上なら上に戻るボタンを表示
+  // スクロール量が300より大きければ上に戻るボタンを表示
   const [buttonIsVisible, setButtonIsVisible] = useState(false);
   const buttonToggleVisibility = () => {
     window.scrollY > 300 ? setButtonIsVisible(true) : setButtonIsVisible(false);
@@ -64,9 +63,8 @@ function App() {
     });
   };
 
-  // 画面サイズが1024px以下ならworksをスライダーで表示
+  // 画面サイズが1024pxより下ならworksをスライダーで表示
   const [isPc, setisPc] = useState(true);
-
   const handleResize = () => {
     const breakpoint = 1024;
 
