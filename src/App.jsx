@@ -111,7 +111,7 @@ function App() {
         </div>
       </div>
       <footer className="footer">
-        <p>@2023 YUMI DOTERA</p>
+        <p>@2024 YUMI DOTERA</p>
       </footer>
     </div>
   );
