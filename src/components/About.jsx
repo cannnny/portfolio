@@ -33,7 +33,7 @@ const About = () => {
         <div className="introduce">
           <div className="introduce-inner career">
             <h3>堂寺ユミ（どうてらゆみ）</h3>
-            <p>東京都在住、1996年生まれの27歳です。</p>
+            <p>東京都在住、1996年生まれの28歳です。</p>
             <p>
               2019年から4年ほど、練馬区役所で職員として勤務し、
               <br />
