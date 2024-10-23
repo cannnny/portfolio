@@ -15,13 +15,11 @@ const ranks = [
 ];
 
 const skillList = [
-  { name: "HTML&CSS", rank: ranks[1] },
+  { name: "HTML&CSS", rank: ranks[2] },
   { name: "JavaScript", rank: ranks[1] },
-  { name: "React", rank: ranks[2] },
-  { name: "Git", rank: ranks[1] },
-  { name: "Photoshop", rank: ranks[0] },
+  { name: "React", rank: ranks[1] },
+  { name: "Photoshop", rank: ranks[1] },
   { name: "Illustrator", rank: ranks[2] },
-  { name: "Sketch", rank: ranks[0] },
 ];
 
 const About = () => {
@@ -42,11 +40,6 @@ const About = () => {
               情報・人事部門の業務に従事しました。
             </p>
             <p>プログラミングは独学です。</p>
-            <p>
-              Reactを使用したWebアプリを中心に
-              <wbr />
-              制作しています。
-            </p>
           </div>
           <div className="introduce-inner skills">
             <h3>できること</h3>
