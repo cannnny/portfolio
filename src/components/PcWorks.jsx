@@ -11,17 +11,19 @@ const PcWorks = ({ data }) => {
                 <div className="item-img">
                   <img src={item.img} alt="" />
                 </div>
-                <div className="item-category">{item.category}</div>
-                <div className="item-title">{item.name}</div>
-                <div className="item-overview">{item.overview}</div>
-                <div className="item-tags">
-                  {item.tag.map((element, id) => {
-                    return (
-                      <div className="tag" key={id}>
-                        {element}
-                      </div>
-                    );
-                  })}
+                <div className="item-text">
+                  <div className="item-category">{item.category}</div>
+                  <div className="item-title">{item.name}</div>
+                  <div className="item-overview">{item.overview}</div>
+                  <div className="item-tags">
+                    {item.tag.map((element, id) => {
+                      return (
+                        <div className="tag" key={id}>
+                          {element}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </a>
             </div>
