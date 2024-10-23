@@ -15,13 +15,11 @@ const ranks = [
 ];
 
 const skillList = [
-  { name: "HTML&CSS", rank: ranks[1] },
+  { name: "HTML&CSS", rank: ranks[2] },
   { name: "JavaScript", rank: ranks[1] },
-  { name: "React", rank: ranks[2] },
-  { name: "Git", rank: ranks[1] },
-  { name: "Photoshop", rank: ranks[0] },
+  { name: "React", rank: ranks[1] },
+  { name: "Photoshop", rank: ranks[1] },
   { name: "Illustrator", rank: ranks[2] },
-  { name: "Sketch", rank: ranks[0] },
 ];
 
 const About = () => {
@@ -35,18 +33,13 @@ const About = () => {
         <div className="introduce">
           <div className="introduce-inner career">
             <h3>堂寺ユミ（どうてらゆみ）</h3>
-            <p>東京都在住、1996年生まれの27歳です。</p>
+            <p>東京都在住、1996年生まれの28歳です。</p>
             <p>
               2019年から4年ほど、練馬区役所で職員として勤務し、
               <br />
               情報・人事部門の業務に従事しました。
             </p>
             <p>プログラミングは独学です。</p>
-            <p>
-              Reactを使用したWebアプリを中心に
-              <wbr />
-              制作しています。
-            </p>
           </div>
           <div className="introduce-inner skills">
             <h3>できること</h3>
