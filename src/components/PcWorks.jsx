@@ -1,4 +1,4 @@
-import "./stylesheets/PcWorks.scss";
+import "../stylesheets/style.scss";
 
 const PcWorks = ({ data }) => {
   return (

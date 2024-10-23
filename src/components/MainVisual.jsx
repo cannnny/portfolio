@@ -1,4 +1,4 @@
-import "./stylesheets/MainVisual.scss";
+import "../stylesheets/style.scss";
 import { FaAngleDown } from "react-icons/fa";
 
 const MainVisual = () => {

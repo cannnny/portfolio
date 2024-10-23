@@ -1,5 +1,4 @@
-import "./stylesheets/Contact.scss";
-
+import "../stylesheets/style.scss";
 import { SiGithub, SiWantedly } from "react-icons/si";
 
 const Contact = () => {

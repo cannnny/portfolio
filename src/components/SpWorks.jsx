@@ -1,4 +1,4 @@
-import "./stylesheets/SpWorks.scss";
+import "../stylesheets/style.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

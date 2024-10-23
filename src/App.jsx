@@ -1,6 +1,5 @@
 // css
-import "./reset.css";
-import "./App.scss";
+import "./stylesheets/style.scss";
 
 // 制作物データ
 import { worksData } from "./worksData";

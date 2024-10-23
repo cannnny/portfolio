@@ -1,5 +1,4 @@
-import "./stylesheets/About.scss";
-
+import "../stylesheets/style.scss";
 import { FaStar } from "react-icons/fa";
 
 const ranks = [
