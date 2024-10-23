@@ -37,7 +37,7 @@ export const worksData = [
     url: "https://canipture.vercel.app/",
     img: "thumb-ca.webp",
     category: "開発",
-    tag: ["React", "microCMS", "Swiper", "Illustrator"],
+    tag: ["React", "microCMS", "Illustrator"],
     overview: "ゲームのスクリーンショットを掲載したギャラリーです。",
   },
   {
@@ -45,7 +45,7 @@ export const worksData = [
     url: "https://whats-for-dinner-etjbd6z2s-cannnny.vercel.app/",
     img: "thumb-wd.webp",
     category: "開発",
-    tag: ["React", "microCMS", "Framer Motion", "Jotai", "Illustrator"],
+    tag: ["React", "microCMS", "Illustrator"],
     overview: "気分に合わせて今日のご飯を提案してくれるWebアプリです。",
   },
   {
@@ -53,7 +53,7 @@ export const worksData = [
     url: "https://rp-bakery.vercel.app/",
     img: "thumb-rp.webp",
     category: "模写",
-    tag: ["HTML&CSS", "JavaScript", "Swiper", "Photoshop", "Illustrator"],
+    tag: ["HTML&CSS", "JavaScript", "Photoshop", "Illustrator"],
     overview: "架空のパン屋のWebサイトとして制作しました。",
   },
   {
@@ -61,7 +61,7 @@ export const worksData = [
     url: "https://rp-drink.vercel.app/",
     img: "thumb-rp2.webp",
     category: "模写",
-    tag: ["HTML&CSS", "JavaScript", "Swiper", "Photoshop", "Illustrator"],
+    tag: ["HTML&CSS", "JavaScript", "Photoshop", "Illustrator"],
     overview: "架空の清涼飲料水を紹介するWebサイトです。",
   },
 ];
