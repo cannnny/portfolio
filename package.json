@@ -41,6 +41,9 @@
     ]
   },
   "devDependencies": {
+    "@percy/cli": "^1.30.7",
+    "@percy/cypress": "^3.1.5",
+    "cypress": "^14.2.1",
     "stylelint": "^15.10.3",
     "stylelint-config-recess-order": "^4.3.0",
     "stylelint-config-standard": "^34.0.0",
